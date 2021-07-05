@@ -1,0 +1,107 @@
+\chapter{Bir o`zgaruvchili funksiyalar va differensial hisob}
+\section{Hosila va differensial}
+\hspace{0.6cm}
+\textbf{1. Oshkor funksiyani differensiallash.}
+$x_{1}$ va $x_{2}$ -- argumentning qiymatlari, $y_{1}=f(x_{1})$ va $y_{2}=f(x_{2})$ esa $y=f(x)$ funksiyaning mos qiymatlari bo`lsin. $\Delta x=x_{2}-x_{1}$ farqni argument orttirmasi, $\Delta y=y_{2}-y_{1}=f(x_{2})-f(x_{1})$ ayirmani esa $[x_{1};x_{2}]$ kesmada funksiya orttirmasi deb ataladi. 
+
+\hspace{0.6cm}Funksiya orttirmasining argument orttirmasiga nisbatini ($\Delta x\to 0$ bo`lganda) $y=f(x)$ funksiyaning $x$ bo`yicha hosilasi deyiladi. 
+$$y^{\prime}=\lim\limits_{\Delta x\to0}\frac{\Delta y}{\Delta x};\ \  \textrm{yoki}\ \ f^{\prime}(x)=\lim\limits_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$$
+
+Hosila bu funksiyaning $x$  nuqtada o`zgarish tezligini ifodalaydi.
+
+Hosilani izlash jarayoniga, funksiyani differensiallash deb aytiladi.
+
+\textbf{Asosiy funksiyalarni differensiallash formulalari}
+
+
+\begin{tabular}{l l}
+
+I. $(x^{m})^{\prime}=mx^{m-1}$&XII. $(\arcsin{x})^{\prime}=\frac{1}{\sqrt{1-x^{2}}}$\\
+
+II. $(\sqrt{x})^{\prime}=-\frac{1}{2\sqrt{x}}$& XIII. $(\arccos{x})^\prime=-\frac{1}{2\sqrt{x}}$\\
+
+III. $\left(\frac{1}{x}\right)^{\prime}=-\frac{1}{x^{2}}$& XIV. $(\mbox{arctg}\ x)^{\prime}=\frac{1}{1+x^{2}}$\\
+
+IV. $(e^{x})^{\prime}=e^{x}$& XV. $(\mbox{arcctg}\ x)^{\prime}=-\frac{1}{1+x^{2}}$\\
+
+V. $(a^{x})^{\prime}=a^{x}\ln{a}$&XVI. $(\mbox{sh}\ x)^{\prime}=\left(\frac{e^{x}-e^{-x}}{2}\right)^{\prime}=\mbox{ch}x$ \\
+
+VI. $(\ln{x})^{\prime}=\frac{1}{x}$&XVII. $(\mbox{ch}\ x)^{\prime}=\left(\frac{e^{x}+e^{-x}}{2}\right)^{\prime}=\mbox{sh}x$ \\
+
+VII. $(\log_{a}x)^{\prime}=\frac{1}{x\ln{a}}$&XVIII. $(\mbox{th}\ x)^{\prime}=\left(\frac{\mbox{sh}\ x}{\mbox{ch}\ x}\right)^{\prime}=\frac{1}{\mbox{ch}^{2}x}$ \\
+
+VIII. $(\sin{x})^{\prime}=\cos{x}$& XIX. $(\mbox{cth}\ x)^{\prime}=\left(\frac{\mbox{ch}\ x}{\mbox{sh}\ x}\right)^{\prime}=-\frac{1}{\mbox{sh}^{2}x}$ \\
+
+IX. $(\cos{x})^{\prime}=-\sin{x}$& \\
+
+X. $(\mbox{tg}\ x)^{\prime}=\sec^{2}{x}$& \\
+
+XI. $(\mbox{ctg}\ x)^{\prime}=-\mbox{cosec}^{2}x$& \\
+
+\end{tabular}
+
+\textbf{Asosiy differensiallash qoidalari}
+
+$C$ -- doimiy, $u=u(x)$, $v=v(x)$ funksiyalar esa hosilaga ega bo`lgan funksiyalar bo`lsin. U holda:
+
+1) $C^{\prime}=0$;\ \ \ 2)$x^\prime=1$;\ \ \  3)$(u\pm v)^{\prime}=u^\prime\pm v^{\prime}$;\ \ \
+
+ 4)$(Cu)^{\prime}=Cu^\prime$;\ \ \ 5)$(uv)^\prime=u^\prime v+uv^\prime$;\ \ \ 6)$\left(\frac{u}{v}\right)^\prime=\frac{u^\prime-uv^\prime}{v^{2}}$;
+ 
+ 7) agar $y=f(u)$, $u=u(x)$ bo`lsa, ya'ni $y=f[u(x)]$ bo`lsa\footnote{Murakkab funksiyani differensiallash qoidasi}:
+ $$y_x^\prime=y_u^\prime\cdot u_x^\prime$$
+ 
+ 
+ Hosila ta'rifidan foydalanib, quyidagi funksiyalarning hosilasini toping:
+ \begin{enumerate}\setcounter{enumi}{738}
+ 	\item $y=\frac{1}{x^{2}}$ \inlineitem $y=\sqrt[3]{x^{2}}$ \inlineitem $y=5\sin x+3\cos x$
+ 	\item $y=5(\textrm{tg}\ x-x)$ \inlineitem $y=\frac{1}{e^x+1}$\inlineitem $y=2^{x^{2}}$	
+ \end{enumerate}
+
+Hosilani topish formulalari va differensiallash qoidalaridan foydalanib, quyidagi funksiyalarning hosilalarini toping:
+\begin{enumerate}\setcounter{enumi}{744}
+	\item $y=2x^3-5x^2+7x+4$
+	
+	$\triangle\ y^\prime=(2x^3)^\prime-(5x^2)\prime+(7x)^\prime+(4)^\prime=2\cdot3x^2-5\cdot2x+7\cdot1+0=6x^2-10x+7.\ \blacktriangle$
+	
+	\item $y=x^{2}e^x$
+	
+	$\triangle\ y^\prime=x^2(e^x)^\prime+e^x+(x^2)^\prime=x^2e^x+2xe^x=xe^x(x+2).\ \blacktriangle$
+	
+	\item $y=x^3\textrm{arctg}\ x$
+	
+	$\triangle\ y^\prime=x^3(\textrm{arctg}\ x)^\prime+\textrm{arctg}\ x\cdot (x^3)^\prime=x^3\cdot\frac{1}{1+x^2}+3x^2\cdot\textrm{arctg}\ x=\frac{x^3}{1+x^2}+3x^2\cdot\textrm{arctg}\ x. \blacktriangle$
+	
+	\item $y=x\sqrt{x}(3\ln {x}-2)$
+	
+	$\triangle$ Funksiyani $y=x^{3/2}(3\ln x-2)$ ko`rinishida yozib olamiz. U holda $$y^\prime=x^{3/2}\cdot\frac{3}{x}+\frac{3}{2}x^{1/2}(3\ln x-2)=3x^{1/2}+\frac{9}{2}x^{1/2}\ln x-3x^{1/2}=\frac{9}{2}\sqrt{x}\ln x.\ \blacktriangle$$
+	
+	\item $y=\frac{\arcsin x}{x}$
+	
+	$\triangle\ y^\prime=\frac{x(\arcsin x)^\prime-\arcsin x\cdot(x)^\prime}{x^{2}}=\frac{x\cdot\frac{1}{\sqrt{1-x^2}}-\arcsin x}{x^2}=\frac{x-\sqrt{1-x^2}\cdot\arcsin x}{x^2\sqrt{1-x^2}}.\ \blacktriangle$
+	
+	\item $y=\frac{\sin x-\cos x}{\sin x+\cos x}$
+	
+	$\triangle\ y^\prime=\frac{(\sin x+\cos x)(\cos x+\sin x)-(\sin x-\cos x)(\cos x-\sin x)}{(\sin x+\cos x)^2}=\frac{(\sin x+\cos x)^2+(\sin x-\cos x)^2}{(\sin x+\cos x)^2}=
+	\frac{2}{(\sin x+\cos x)^2}.\ \blacktriangle $
+	
+	\item $y=(2x^3+5)^4$
+	
+	$\triangle$ $u=2x^3+5$ belgilash kiritamiz. U holda $y=u^4$. Murakkab funksiyani differensiallash qoidasidan foydalansak,
+	
+	$y^\prime=(u^4)^\prime_u\cdot(2x+5)^\prime_x=4u^3\cdot6x^2=24x^2(2x^3+5)^3.\ \blacktriangle$
+\end{enumerate}	
+
+	Funksiyalarning hosilalarini toping:
+\begin{enumerate}\setcounter{enumi}{770}
+	\item $y=\frac{7}{x^3}$ \inlineitem $y=\frac{3}{4}x\sqrt[3]{x}$
+	\item $y=\frac{2}{7}x^3\sqrt{x}-\frac{4}{11}x^5\sqrt{x}+\frac{2}{15}x^7\sqrt{x}$
+	\item $y=(x^2+2x+2)e^x$ \inlineitem $y=3x^3\ln x-x^3$
+	\item $y=\frac{2^{3x}}{3^{2x}}$\inlineitem $y=x^2\sin x+2x\cos x-2\sin x$
+	\item $y=\ln(2x^3+3x^2)$ \inlineitem $y=\sqrt{1-3x^2}$
+	\item $y=x\arccos{\frac{x}{2}}-\sqrt{4-x^2}$
+	\item $y=\sqrt{x}\arcsin{\sqrt{x}}+\sqrt{1-x}$
+	\item $y=\left(\sin{\frac{x}{2}}-\cos{\frac{x}{2}}\right)$ \inlineitem $y=\cos^3{x/3}$
+	
+	
+\end{enumerate}	
