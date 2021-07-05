@@ -1,0 +1,149 @@
+\chapter{Aniqmas integral}
+\section{Bevosita integrallash. Yangi o`zgaruvchi kiritish va bo`laklab integrallash usullari}
+\hspace{0.6cm}
+\textbf{Bevosita integrallash.} 
+Agar $F^{\prime}(x)=f(x)$ yoki $dF(x)=f(x)dx$ bo`lsa, $F(x)$ funksiya, $f(x)$ uchun boshlang`ich funksiya deyiladi. 
+
+\hspace{0.6cm}Agar $f(x)$ funksiya $F(x)$ ko`rinishidagi boshlang`ich funksiyaga ega bo`lsa, u cheksiz ko`p miqdordagi boshlang`ich funksiyalarga ega bo`ladi. Ushbu barcha boshlang`ich funksiyalarni $F(x)+C$ ko`rinishida ifodalash mumkin, bu yerda $C$ -- doimiy.
+
+
+$f(x)$ funksiya (yoki $f(x)dx$ ifoda) ning aniqmas integrali deganda, uning barcha boshlang`ich funksiyalari to`plami tushuniladi hamda $\int f(x)dx=F(x)+C$ ko`rinishida belgilanadi. 
+Bu yerda $\int$ - integral belgisi, $f(x)$ -- integral ostidagi funksiya, $f(x)dx$ -- integral osti ifodasi, $x$ -- integrallash o`zgaruvchisi.
+
+Aniqmas integralni izlash jarayoniga funksiyani integrallash deyiladi.
+
+\textbf{Aniqmas integralning xossalari:}
+
+$1^{\circ}.\  \left(\int f(x)dx\right)^{\prime}=f(x)$ \label{1-xossa}
+
+$2^{\circ}.\  d\left(\int f(x)dx\right)=f(x)dx$\label{2-xossa}
+
+$3^{\circ}.\ \int dF(x)=F(x)+C$\label{3-xossa}
+
+$4^{\circ}.\ \int af(x)dx=a\int f(x)dx$, bu yerda $a$ -- doimiy\label{4-xossa}
+
+$5^{\circ}.\ \int\left[f_{1}(x)\pm f_{2}(x)\right]dx=\int f_{1}(x)dx\pm \int f_{2}(x)dx$ \label{5-xossa}
+
+$6^{\circ}.\ $ Agar $\int f(x)dx=F(x)+C$ va $u=\varphi(x)$ bo`lsa, u holda $\int f(u)du=F(u)+C$\label{6-xossa}
+
+\textbf{Asosiy integrallar jadvali}
+
+
+I. $\int dx=x+C$
+
+II. $\int x^{m}dx=\frac{x^{m+1}}{m+1}+C$ ($m\ne1$)
+
+III. $\int \frac{dx}{x}=\ln{x}+C$
+
+IV.  $\int \frac{dx}{1+x^{2}}=\textrm{arctg}x+C$
+
+V. $\int \frac{dx}{\sqrt{1-x^{2}}}=\arcsin{x}+C$
+
+VI. $\int e^{x}dx=e^{x}+C$
+
+VII. $\int a^{x}dx=\frac{a^{x}}{\ln{a}}+C$
+
+VIII. $\int \sin{x}dx=-\cos{x}+C$	
+
+IX. $\int \cos{x}dx=\sin{x}+C$
+
+X. $\int \sec^{2}xdx=\textrm{tg}x+C$
+
+XI. $\int \textrm{cosec}^{2}xdx=\textrm{ctg}x+C$
+
+XII. $\int \textrm{sh}xdx=\textrm{ch}x+C$
+
+XIII. $\int \textrm{ch}xdx=\textrm{sh}x+C$
+
+XIV. $\int\frac{dx}{\textrm{ch}^{2}x}=\textrm{th}x+C$
+
+XV. $\int \frac{dx}{\textrm{sh}^{2}x}=-\textrm{cth}x+C$
+
+\begin{enumerate}
+	\setcounter{enumi}{1327}
+	\item Aniqmas integralni hisoblang: $\int \left( 2x^{3}-5x^{2}+7x-3 \right) dx$
+	
+	$\triangle$. Aniqmas integralning $4^{\circ}$ va $5^{\circ}$ xossalaridan foydalangan holda ifodani quyidagi ko`rinishda yozib olamiz:
+	
+	$$\int \left( 2x^{3}-5x^{2}+7x-3 \right)dx=2\int x^{3}dx- 5\int x^{2}dx+7\int xdx-3\int dx$$
+	
+	Dastlabki uchta integral uchun II formulani, 4-integral uchun I formulani qo`llaymiz:
+	$$\int \left( 2x^{3}-5x^{2}+7x-3 \right) dx=2\cdot\frac{x^{4}}{4}-5\cdot\frac{x^{3}}{3}+7\cdot\frac{x^{2}}{2}-3x+C=\frac{1}{2}x^{4}-\frac{5}{3}x^{3}+\frac{7}{2}x^{2}-3x+C\ \blacktriangle$$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\int \left( \sqrt{x}+\frac{1}{\sqrt[3]{x}} \right)^{2}dx$$
+	
+	\begin{multline*}
+		\triangle\ \int \left( \sqrt{x}+\frac{1}{\sqrt[3]{x}} \right)^{2}dx=\int \left( x+2\cdot\frac{x^{1/2}}{x^{1/3}}+\frac{1}{x^{2/3}} \right)dx=\int \left( x+2x^{1/6}+x^{-2/3} \right)dx=\\
+		=\int xdx+2\int x^{1/6}dx+\int x^{-2/3}dx=\frac{x^{2}}{2}+2\cdot\frac{x^{7/6}}{7/6}+\frac{x^{1/3}}{1/3}+C=\frac{x^{2}}{2}+\frac{12}{7}x\sqrt[6]{x}+3\sqrt[3]{x}+C\ \blacktriangle
+	\end{multline*}
+
+	\item Aniqmas integralni hisoblang:
+	$$\int 2^{x}\cdot3^{2x}\cdot5^{3x}dx$$
+	
+	$$\triangle\ \int 2^{x}\cdot3^{2x}\cdot5^{3x}dx=\int \left( 2\cdot3^{2}\cdot5^{3}\right)^{x}dx=\int 2250^{x}dx=\frac{2250^{x}}{\ln{2250}}+C\ \blacktriangle \footnote{Aniqmas integralning $6^{\circ}$ xossasi yordamida, funksiyani differensial belgisi ostidan chiqarish orqali, asosiy integrallar jadvalini kengaytirish mumkin.}$$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\int (1+x^{2})^{1/2}xdx$$
+	$\triangle$ Ushbu integral ko`rinishini o`zgartirgan holda, II formulaga keltirish mumkin:
+	$$\int (1+x^{2})^{1/2}xdx=\frac{1}{2}\int (1+x^{2})^{1/2}\cdot2x dx=\frac{1}{2}\int (1+x^{2})^{1/2}d(1+x^{2})$$
+	Endi integrallash o`zgaruvchisi $1+x^{2}$ ifoda bo`ladi va integralni II formula orqali hisoblash mumkin. Demak,
+	$$\int (1+x^{2})^{1/2}xdx=\frac{1}{2}\frac{(1+x^{2})^{1/2+1}}{1/2+1}+C=\frac{1}{3}(1+x^{2})^{3/2}+C\ \blacktriangle$$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\int (x^{2}-3x+1)^{10}(2x-3)dx$$
+	
+	$\triangle$ Bu misolda ham, avvalgi misoldagi usulni qo`llaymiz:
+	$$\int (x^{2}-3x+1)^{10}d(x^{2}-3x+1)=\frac{1}{11}(x^{2}-3x+1)^{11}\ \blacktriangle$$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\int (\ln{t})^{4}\frac{dt}{t}$$
+	
+	$\triangle$ $\frac{dt}{t}$ ifodani $d(\ln{t})$ ko`rinishida yozish mumkin. U holda 
+	$$\int (\ln{t})^{4}d(\ln{t})=\frac{1}{5}(\ln{t})^{5}+C\ \blacktriangle$$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\textrm{e}^{3\cos{x}}\sin{x}dx$$
+	
+	$\triangle$ Berilgan integralni quyidagi ko`rinishda yozish mumkin:
+	$$\int \textrm{e}^{3\cos{x}}\sin{x}dx=\frac{1}{3}\int \textrm{e}^{3\cos{x}}3\cdot\sin{x}dx $$
+	Shuningdek ma'lumki, $3\sin{x}dx=-d(3\cos{x})$. Demak,
+	$$\int \textrm{e}^{3\cos{x}}\sin{x}dx=-\frac{1}{3}\int \textrm{e}^{3\cos{x}}d(3\cos{x})$$
+	Bu yerda integrallash o`zgaruvchisi sifatida $3\cos{x}$ xizmat qiladi. Endi esa VI formulani qo`llagan holda integralni hisoblaymiz:
+	$$\int \textrm{e}^{3\cos{x}}\sin{x}dx=-\frac{1}{3}\textrm{e}^{3\cos{x}}+C.\ \blacktriangle $$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\int (2\sin{x}+3\cos{x})dx$$
+	
+	$\triangle$ VIII va IX formulalardan foydalangan holda hisoblaymiz:
+	$$\int (2\sin{x}+3\cos{x})dx=2\int \sin{x}dx + 3\int \cos{x}dx=-2\cos{x}+3\sin{x}+C\ \blacktriangle$$
+	
+	\item Aniqmas integralni hisoblang:
+	$$\int (\textrm{tg}x+\textrm{ctg}x)^{2}dx$$
+	
+	$\triangle$ X va XI formulalardan foydalanamiz:
+	
+	\begin{multline*}
+		\int (\textrm{tg}x+\textrm{ctg}x)^{2}dx =\int \left( \textrm{tg}^{2}x+2\textrm{ctg}x\ \textrm{tg}x+\textrm{ctg}^{2}x \right)dx= \int (\textrm{tg}^{2}x+1+1+\textrm{ctg}^{2}x)dx=\\
+		=\int(\textrm{tg}^{2}x+1)dx+\int (1+\textrm{ctg}^{2}x)dx=\int \textrm{sec}^{2}xdx+\int \textrm{cosec}^{2}xdx=\textrm{tg}x-\textrm{ctg}x+C.\  \blacktriangle
+	\end{multline*}
+
+ Aniqmas integrallarni hisoblang:
+
+\item $\int x\sqrt{x}dx$
+\inlineitem $\int \frac{dx}{\sqrt[5]{x}}$
+
+\item $ \int \frac{2-\sqrt{1-x^{2}}}{\sqrt{1-x^{2}}}dx$
+\inlineitem $\int \frac{2-x^{4}}{1+x^{2}}$
+
+\item $\int \textrm{e}^{3x}\cdot3xdx$
+\inlineitem $\int \textrm{tg}^{2}xdx$
+
+	
+\end{enumerate}
+
+
+\section{Ratsional kasrlarni integrallash}
+
+\section{Eng sodda irratsional funksiyalarni integrallash}
+\textbf{1.} $\int \textbf{R}(\textbf{x}, (\textbf{\textbf{ax}}+\textbf{b})^{\textbf{m}_{1}/\textbf{n}_{1}}, (\textbf{ax}+\textbf{b})^{\textbf{m}_{2}/\textbf{n}_{2}}, \ldots)\,\textbf{dx}$ \textbf{ko`rinishidagi integrallar}, bu yerda $R$--ratsional funksiya, $m_1$, $n_1$, $m_2$, $n_2$,$\ldots$ -- butun sonlar. 
