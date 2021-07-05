@@ -1,0 +1,100 @@
+\documentclass[a4paper, fontsize=12pt]{scrbook}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{pstricks}
+\usepackage[inline]{enumitem}
+\usepackage{pst-grad}
+\usepackage{pst-ghsb}
+\usepackage{pst-slpe}
+\usepackage{geometry}
+\usepackage[document]{ragged2e}
+\graphicspath{ {./pictures/} }
+\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage{footnotebackref}
+
+\geometry{
+		left=3cm,
+		right=1.5cm,
+		top=3cm,
+		bottom=2cm,
+		twoside}
+
+\linespread{1.3}
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+ 
+ 
+ \usepackage[inline]{enumitem}   
+ \makeatletter
+ 
+ \newcommand{\inlineitem}[1][]{%
+ 	\ifnum\enit@type=\tw@
+ 	{\descriptionlabel{#1}}
+ 	\hspace{\labelsep}%
+ 	\else
+ 	\ifnum\enit@type=\z@
+ 	\refstepcounter{\@listctr}\fi
+ 	\quad\@itemlabel\hspace{\labelsep}%
+ 	\fi}
+ \makeatother
+ \parindent=0pt
+ 
+\newcommand{\chaptertitlename}{bob}
+\usepackage{blindtext}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\sffamily\huge\bfseries\color{blue}}
+{\thechapter- \chaptertitlename}{16pt}{\Huge}
+
+\renewcommand{\figurename}{-rasm.}
+\usepackage{afterpage}
+
+
+\titleformat{\section}
+{\normalfont\sffamily\Large\bfseries\color{cyan}}
+{\thesection}{1em}{}
+\begin{document}
+\begin{titlepage} 
+\pagecolor{cyan}\afterpage{\nopagecolor}
+	\raggedleft 
+	
+	\rule{1pt}{\textheight} 
+	\hspace{0.05\textwidth} 
+	\parbox[b]{0.75\textwidth}{ 
+		
+		{\Huge\bfseries Oliy Matematikadan misol va masalalar to`plami\\1-qism}\\[2\baselineskip] 
+		{\large\textit{Oliy o`quv yurtlari talabalari uchun}}\\[4\baselineskip] 
+		{\Large\textsc{P.E.Danko, A.G.Popov, T.Y.Kojevnikova}} 
+		
+		\vspace{0.5\textheight} 
+		
+		{\noindent }\\[\baselineskip] 
+	}
+	
+\end{titlepage}
+	\renewcommand{\contentsname}{Mundarija}
+	\tableofcontents
+	
+	\include{chapter1}
+	\include{chapter2}
+	\include{chapter3}
+	\include{chapter4}
+	\include{chapter5}
+	\include{chapter6}
+	\include{chapter7}
+	\include{chapter8}
+	\include{chapter9}
+	\include{chapter10}
+	\include{chapter11}
+	\include{javoblar}
+	
+
+
+\end{document}
