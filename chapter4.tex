@@ -1,0 +1,1322 @@
+\chapter{Matritsa va determinantlar}
+\section{n-tartibli determinant haqida tushuncha}
+$$
+\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}&a_{14}\\
+	a_{21}&a_{22}&a_{23}&a_{24}\\
+	a_{31}&a_{32}&a_{33}&a_{34}\\
+	a_{41}&a_{42}&a_{43}&a_{44}\\
+\end{pmatrix}
+$$ ko`rinishidagi to`rtinchi tartibli determinant quyidagi ifoda orqali hisoblanadi:
+\begin{equation}
+	\begin{vmatrix}
+		a_{11}&a_{12}&a_{13}&a_{14}\\
+		a_{21}&a_{22}&a_{23}&a_{24}\\
+		a_{31}&a_{32}&a_{33}&a_{34}\\
+		a_{41}&a_{42}&a_{43}&a_{44}\\
+	\end{vmatrix}=a_{11}
+\begin{vmatrix}
+	a_{22}&a_{23}&a_{24}\\
+	a_{32}&a_{33}&a_{34}\\
+	a_{42}&a_{43}&a_{44}\\
+\end{vmatrix}-a_{12}
+\begin{vmatrix}
+	a_{21}&a_{23}&a_{24}\\
+	a_{31}&a_{33}&a_{34}\\
+	a_{41}&a_{43}&a_{44}\\
+\end{vmatrix}+a_{13}
+\begin{vmatrix}
+	a_{21}&a_{22}&a_{24}\\
+	a_{31}&a_{32}&a_{34}\\
+	a_{41}&a_{42}&a_{44}\\
+\end{vmatrix}-a_{14}
+\begin{vmatrix}
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}\\
+	a_{41}&a_{42}&a_{43}\\
+\end{vmatrix}	
+\label{4.1}	
+\end{equation}
+
+4-tartibli determinantlar yordamida 5- va undan yuqori tartibli determinant tushunchalarini ham kiritish mumkin.
+
+Ixtiyoriy tartibli determinantlar uchun ma'lum bir element uchun algebraik to`liruvchi va minorlarni aniqlash masalasi o`z kuchida qoladi. Shuningdek, uchinchi tartibli determinantlar uchun keltirilgan algebraik to`ldiruv-chilar haqidagi  ikkita teorema yuqori tartibli determinantlar uchun ham o`rinli bo`ladi.
+
+Shunday qilib, $M_{ik}$ orqali minorni, $A_{ik}$ orqali esa $n$-tartibli determinant $a_{ik}$ elementi (ya'ni, $i$-satr va $k$-ustunda joylashgan element)ning algebraik to`ldiruvchisini ifodalagan holda, quyidagi ifodani hosil qilish mumkin:
+\begin{equation}
+	A_{ik}=(-1)^{i+k}M)_{ik}
+	\label{4.2}
+\end{equation}
+$D$ -- $n$ tartibli determinant bo`lsin. Uni dastlab $i$-satr elementlari bo`yicha, so`ngra esa $k$-ustun elementlari bo`yicha yoyib chiqqan holda, quyidagini hosil qilamiz:
+\begin{subequations}
+\begin{equation}
+	D=a_{i1}A_{i1}+a_{i2}A_{i2}+\ldots +a_{in}A_{in};
+	\label{4.3a}
+\end{equation}
+\begin{equation}
+	D=a_{1k}A_{1k}+a_{2k}A_{2k}+\ldots+a_{nk}A_{nk}
+\label{4.3b}
+\end{equation}
+\end{subequations}
+Boshqa tomondan, $j\ne i$ hamda $k\ne l$ bo`lganda:
+\begin{subequations}
+	\begin{equation}
+		a_{j1}A_{i1}+a_{j2}A_{i2}+\ldots+a_{jn}A_{in}=0;
+		\label{4.4a}
+	\end{equation}
+\begin{equation}
+	a_{1k}A_{1l}+a_{2k}A_{2l}+\ldots+a_{nk}A_{nl}=0
+	\label{4.4b}
+\end{equation}
+\end{subequations}
+Ikkinchi va uchinchi tartibli determinantlar uchun keltirilgan xossalar ixtiyoriy tartibli determinantlar uchun ham o`rinli bo`ladi.
+
+$$
+\begin{cases} 
+	a_{11}x_{1}+a_{12}x_{2}+\ldots+a_{1n}x_{n}=b_{1} \\ 
+	a_{21}x_{1}+a_{22}x_{2}+\ldots+a_{2n}x_{n}=b_{2} \\ 
+	\ldots \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\\
+	a_{n1}x_{1}+a_{n2}x_{2}+\ldots+a_{nn}x_{n}=b_{n}
+\end{cases} 
+$$
+ko`rinishidagi chiziqli tenglamalar sistemasini yechish uchun:
+$$
+D=
+\begin{vmatrix}
+	a_{11}&a_{12}&\ldots&a_{1n}\\
+	a_{21}&a_{22}&\ldots&a_{2n}\\
+	\ldots&\ldots&\ldots&\ldots\\
+	a_{n1}&a_{n2}&\ldots&a_{nn}\\
+\end{vmatrix}\ne 0
+$$ 
+determinantni topish zarur bo`ladi. Tenglamalarning yechimlari esa quyidagi ko`rinishda topiladi:
+\begin{equation*}
+	x{1}=\frac{D_{1}}{D};\ \ \ \ x_{2}=\frac{D_{2}}{D};\ldots \ \ \ x_{k}=\frac{D_{k}}{D}
+\end{equation*} 
+bu yerda: $D$ - matritsaning asosiy determinanti, $D_{k}$ ($k=1,2,\ldots,n$) esa matritsa $k$-ustunini ozod hadlar bilan almashtirish natijasida hosil bo`lgan matritsalarning determinantlari:
+\begin{equation*}
+	D_{k}=\begin{vmatrix}
+		a_{11}&a_{12}&\ldots&a_{1,k-1}&b_{1}&a_{1,k+1}&\ldots&a_{1n}\\
+		a_{21}&a_{22}&\ldots&a_{2,k-1}&b_{2}&a_{2,k+1}&\ldots&a_{2n}\\
+		\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+		a_{n1}&a_{n2}&\ldots&a_{n,k-1}&b_{n}&a_{n,k+1}&\ldots&a_{nn}\\
+	\end{vmatrix}
+\end{equation*}
+
+
+\begin{enumerate}
+	\setcounter{enumi}{382}
+	\item Determinantni hisoblang:
+	$$\begin{vmatrix}
+		3&5&7&2\\
+		1&2&3&4\\
+		-2&-3&3&2\\
+		1&3&5&4\\	
+	\end{vmatrix}$$ 
+
+$\triangle$ Misolni yechish tartibi quyidagicha: 
+
+1) 2-satr elementlarining hammasini 3 ga ko`paytirib, 1-satrdan ayirib tashlaymiz; 
+
+2) 3-satr elementlariga ikkilangan 2-satr elementlarini qo`shamiz; 
+
+3) 4-satr elementlaridan 2-satr elementlarini ayirib tashlaymiz.
+
+ Natijada determinant quyidagi ko`rinishga  keladi:
+$$D=\begin{vmatrix}
+	0&-1&-2&-10\\
+	1&2&3&4\\
+	0&1&9&10\\
+	0&1&2&0\\
+\end{vmatrix}$$
+Ushbu determinantni 1-ustun elementlari bo`yicha yoyib chiqamiz:
+$$D=-\begin{vmatrix}
+	-1&-2&-10\\
+	1&9&10\\
+	1&2&0\\
+\end{vmatrix}$$
+
+1-satr elementlariga 3-satr elementlarini qo`shib natijani 1-satrga, 2-satr elementlaridan 3-satr elementlarini ayirib natijani 2-satrga va 3-satr elementlarini o`z holicha 3-satrga yozamiz:
+$$D=-\begin{vmatrix}
+	0&0&-10\\
+	0&7&10\\
+	1&2&0\\
+\end{vmatrix}$$
+Hosil bo`lgan determinantni 1-ustun elementlari bo`yicha yoyib chiqamiz:
+$$D=-\begin{vmatrix}
+	0&-10\\
+	7&10\\
+\end{vmatrix}=-70.\ \blacktriangle$$
+
+\item Determinantni hisoblang:
+$$\begin{vmatrix}
+	1&2&0&0&0\\
+	3&2&3&0&0\\
+	0&4&3&4&0\\
+	0&0&5&4&5\\
+	0&0&0&6&5\\
+\end{vmatrix}$$
+
+$\triangle$ 2-, 4- va 5-ustunlardan umumiy ko`paytuvchini determinant belgisidan tashqariga chiqaramiz:
+$$D=2\cdot2\cdot5\cdot\begin{vmatrix}
+	1&1&0&0&0\\
+	3&1&3&0&0\\
+	0&2&3&2&0\\
+	0&0&5&2&1\\
+	0&0&0&3&1\\
+\end{vmatrix}$$
+
+2-ustun elementlaridan 1-ustun elementlarini ayirib tashlaymiz va hosil bo`lgan determinantni 1-satr elementlari bo`yicha yoyib chiqamiz:
+$$D=20\cdot\begin{vmatrix}
+	1&0&0&0&0\\
+	3&-2&3&0&0\\
+	0&2&3&2&0\\
+	0&0&5&2&1\\
+	0&0&0&3&1\\
+\end{vmatrix}=20\cdot\begin{vmatrix}
+-2&3&0&0\\
+2&3&2&0\\
+0&5&2&1\\
+0&0&3&1
+\end{vmatrix}$$
+
+2-satr elementlariga 1-satr elementlarini qo`shamiz, $-2$ (1-ustundagi umumiy ko`paytuvchi)ni determinant belgisidan tashqariga chiqaramiz. So`ng hosil bo`lgan determinantni 1-ustun elementlari bo`yicha yoyib chiqamiz:
+$$D=-40\cdot\begin{vmatrix}
+	1&3&0&0\\
+	0&6&2&0\\
+	0&5&2&1\\
+	0&0&3&1
+\end{vmatrix}=-40\cdot\begin{vmatrix}
+6&2&0\\
+5&2&1\\
+0&3&1
+\end{vmatrix}$$
+
+2-satr elementlaridan 3-satr elementlarini ayiramiz, 2 (1-satrdagi umumiy ko`paytuvchi)ni determinant belgisidan tashqariga chiqaramiz. Hosil bo`lgan determinantni 3-ustun elementlari bo`yicha yoyib chiqamiz:
+$$D=-80\cdot\begin{vmatrix}
+	3&1&0\\
+	5&-1&0\\
+	0&3&1
+\end{vmatrix}=-80\cdot\begin{vmatrix}
+3&1\\
+5&-1\\
+\end{vmatrix}=640.\ \blacktriangle$$
+
+\item Quyidagi tenglamalar sistemasidan $y$ ni aniqlang:
+$$\begin{cases}
+	x+2y+3z=14\\
+	y+2z+3t=20\\
+	z+2t+3x=14\\
+	t+2x+3y=12
+\end{cases}
+	$$
+	
+	$\triangle$ Dastlab determinantni hisoblaymiz:
+	$$D=\begin{vmatrix}
+		1&2&3&0\\
+		0&1&2&3\\
+		3&0&1&2\\
+		2&3&0&1\\
+	\end{vmatrix}$$
+2-ustun elementlaridan ikkilangan 1-ustun elementlarini ayirib tashlaymiz; 3-ustun elementlaridan uchlangan 1-ustun elementlarini ayirib tashlaymiz:
+$$D=\begin{vmatrix}
+	1&0&0&0\\
+	0&1&2&3\\
+	3&-6&-8&2\\
+	2&-1&-6&1\\
+\end{vmatrix}=\begin{vmatrix}
+1&2&3\\
+-6&-8&2\\
+-1&-6&1\\
+\end{vmatrix}=(-2)\cdot(-1)\cdot\begin{vmatrix}
+1&2&3\\
+3&3&-1\\
+1&6&-1\\
+\end{vmatrix}$$
+Yana bir  marta 2-ustun elementlaridan ikkilangan 1-ustun elementlarini ayirib tashlaymiz; 3-ustun elementlaridan uchlangan 1-ustun elementlarini ayirib tashlaymiz:
+$$D=2\begin{vmatrix}
+	1&0&0\\
+	3&-2&-10\\
+	1&4&-4\\
+\end{vmatrix}=2\cdot\begin{vmatrix}
+-2&-10\\
+4&-4\\
+\end{vmatrix}=2\cdot(8+40)=96$$
+Endi esa:
+$$D_{y}=\begin{vmatrix}
+	1&14&3&0\\
+	0&20&2&3\\
+	3&14&1&2\\
+	2&12&0&1\\
+\end{vmatrix}=2\cdot\begin{vmatrix}
+1&7&3&0\\
+0&10&2&3\\
+3&7&1&2\\
+2&6&0&1\\
+\end{vmatrix}$$
+3-satr elementlaridan uchlangan 1-satr elementlarini ayirib tashlaymiz; 4-satr elementlaridan ikkilangan 1-satr elementlarini ayirib tashlaymiz:
+$$D_{y}=2\cdot\begin{vmatrix}
+	1&7&3&0\\
+	0&10&2&3\\
+	0&-14&-8&2\\
+	0&-8&-6&1\\
+\end{vmatrix}=2\cdot\begin{vmatrix}
+10&2&3\\
+-14&-8&2\\
+-8&-6&1\\
+\end{vmatrix}=2\cdot2\cdot2\cdot\begin{vmatrix}
+5&1&3\\
+-7&-4&2\\
+-4&-3&1\\
+\end{vmatrix}$$
+1-satr elementlaridan uchlangan 3-satr elementlarini ayirib tashlaymiz; 2-satr elementlaridan ikkilangan 3-satr elementlarini ayirib tashlaymiz:
+$$D_{y}=\begin{vmatrix}
+	17&10&0\\
+	1&2&0\\
+	-4&-3&1\\
+\end{vmatrix}=8\cdot\begin{vmatrix}
+17&10\\
+1&2\\
+\end{vmatrix}=192$$
+Demak, $y=D_{y}/D=192/96=2.\ \blacktriangle$
+
+\item Determinantni hisoblang:
+$$V=\begin{vmatrix}
+	1&1&1&1\\
+	a&b&c&d\\
+	a^{2}&b^{2}&c^{2}&d^{2}\\
+	a^{3}&b^{3}&c^{3}&d^{3}\\
+\end{vmatrix}$$
+
+$\triangle$ 1)\ 1-satr elementlarini $a$ ga ko`paytirib, 2-satr elementlaridan ayirib tashlaymiz; 
+
+2)\ 2-satr elementlarini $a$ ga ko`paytirib, 3-satr elementlaridan ayirib tashlaymiz; 
+
+3)\ 3-satr elementlarini $a$ ga ko`paytirib, 4-satr elementlaridan ayirib tashlaymiz:
+$$V=\begin{vmatrix}
+	1&1&1&1\\
+	0&b-a&c-a&d-a\\
+	0&b^{2}-ab&c^{2}-ac&d^{2}-ad\\
+	0&b^{3}-ab^{2}&c^{3}-ac^{2}&d^{3}-ad^{2}\\
+\end{vmatrix}=(b-a)(c-a)(d-a)
+\begin{vmatrix}
+1&1&1\\
+b&c&d\\
+b^{2}&c^{2}&d^{2}\\
+\end{vmatrix}$$
+1-satr elementlarini $b$ ga ko`paytirib 2-satr elementlaridan ayiramiz; 2-satr elementlarini $b$ ga ko`paytirib 3-satr elementlaridan ayiramiz:
+\begin{multline*}
+	V=(b-a)(c-a)(d-a)\begin{vmatrix}
+	1&1&1\\
+	0&c-b&d-b\\
+	0&c^{2}-bc&d^{2}-bd
+\end{vmatrix}=(b-a)(c-a)(d-a)(c-b)(d-b)\begin{vmatrix}
+1&1\\
+c&d
+\end{vmatrix}=\\=(b-a)(c-a)(d-a)(c-b)(d-b)(d-c).
+\end{multline*}
+Ko`rinib turibdiki, agar $a$, $b$, $c$ va $d$ larning  orasida teng qiymatlilari bo`lsagina $V$ determinant nolga teng bo`ladi. $\blacktriangle$
+\end{enumerate}
+Determinantlarni hisoblang:
+\begin{enumerate}\setcounter{enumi}{386}
+	\item $\begin{vmatrix}
+		1&-2&3&4\\
+		2&1&-4&3\\
+		3&-4&-1&2\\
+		4&3&2&-1
+	\end{vmatrix}$
+	\inlineitem
+	$\begin{vmatrix}
+		-1&-1&-1&-1\\
+		-1&-2&-4&-8\\
+		-1&-3&-9&-27\\
+		-1&-4&-16&-64
+	\end{vmatrix}$
+\item$\begin{vmatrix}
+	10&2&0&0&0\\
+	12&10&2&0&0\\
+	0&12&10&2&0\\
+	0&0&12&10&2\\
+	0&0&0&12&10
+\end{vmatrix}$
+	\inlineitem
+	$\begin{vmatrix}
+		1+a&1&1&1\\
+		1&1-a&1&1\\
+		1&1&1+b&1\\
+		1&1&1&1-b\\
+	\end{vmatrix}$
+\end{enumerate}	
+
+Tenglamalar sistemasini yeching:
+
+\begin{enumerate}\setcounter{enumi}{390}
+	\item $\begin{cases}
+		y-3z+4t=-5\\
+		x-2z+3t=-4\\
+		3x+2y-5t=12\\
+		4x+3y-5z=5
+	\end{cases}$
+\inlineitem
+$\begin{cases}
+	x-3y+5z-7t=12\\
+	3x-5y+7z-t=0\\
+	5x-7y+z-3t=4\\
+	7x-y+3z-5t=16
+\end{cases}$
+
+\item $\begin{cases}
+	x+2y=5\\
+	3y+4z=18\\
+	5z+6u=39\\
+	7u+8v=68\\
+	9v+10x=55
+\end{cases}$
+\inlineitem
+$\begin{cases}
+	2x+3y-3z+4t=7\\
+	2x+y-z+2t=5\\
+	6x+2y+z=4\\
+	2x+3y-5t=-11
+\end{cases}$
+
+\end{enumerate}
+
+\section{Chiziqli almashtirishlar va matritsalar}
+
+$x$ va $y$ o`zgaruvchilarning qiymatlarini 
+$$x=a_{11}x^\prime+a_{12}y^\prime$$
+$$y=a_{21}x^{\prime}+a_{22}y^\prime$$
+tenglamalar yordamida $x^\prime$ va $y^\prime$ o`zgaruvchilar orqali ifodalash mumkin. Ushbu tenglamalar $x^\prime$ va $y^\prime$ o`zgaruvchilarning chiziqli almashtirish tenglamalari deb ataladi. Ularni nuqta (yoki vektor)ning tekislikdagi koordinatalarini chiziqli almashtirish deb ham qarash mumkin. 
+
+$$A=\begin{pmatrix}
+	a_{11}&a_{12}\\
+	a_{21}&a_{22}
+\end{pmatrix}$$ ko`rinishidagi matritsani chiziqli almashtirish matritsasi deyiladi. 
+$$D=\begin{vmatrix}
+	a_{11}&a_{12}\\
+	a_{21}&a_{22}
+\end{vmatrix}$$ko`rinishidagi determinantni esa chiziqli almashtirish determinanti deyiladi. Bundan keyin faqat $D\ne0$ bo`lgan hollarni ko`rib chiqamiz.
+
+Shuningdek, fazodagi \footnote[1]{Ba'zida chiziqli almashtirish deganda quyidagi umumiyroq ko`rinishdagi tengliklar tushuniladi:
+	$$x=a_{11}x^\prime+a_{12}y^\prime+a_{13}z^\prime+b_1$$
+	$$x=a_{21}x^\prime+a_{22}y^\prime+a_{23}z^\prime+b_2$$
+	$$x=a_{31}x^\prime+a_{32}y^\prime+a_{33}z^\prime+b_3$$
+Bu yerda $b_1=b_2=b_3=0$ bo`lgan hol uchun chiziqli almashtirishlar ko`rib chiqiladi. Funksional analiz kursida chiziqli almashtirishni shuningdek chiziqli operator deb ham atladi.} uchta o`zgaruvchi uchun ham chiziqli almashtirishlarni ko`rib chiqish mumkin:
+$$x=a_{11}x^\prime+a_{12}y^\prime+a_{13}z^\prime$$
+$$x=a_{21}x^\prime+a_{22}y^\prime+a_{23}z^\prime$$
+$$x=a_{31}x^\prime+a_{32}y^\prime+a_{33}z^\prime$$
+bu yerda 
+$$A=\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}$$
+va 
+$$D=\begin{vmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{vmatrix}$$
+mos holda almashtirish matritsasi va determinanti.
+
+Agar $D_A\ne0$ bo`lsa, $A$ matritsani \textcolor{red}{aynimagan(o`ziga xos bo`lmagan)} matritsa deyiladi, $D_A=0$ bo`lsa, \textcolor{red}{aynigan(o`ziga xos)} matritsa deyiladi.
+
+$$\begin{pmatrix}
+	a_{11}&a_{12}\\
+	a_{21}&a_{22}
+\end{pmatrix}\ \mbox{va}\ \ \begin{pmatrix}
+a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}
+\end{pmatrix}$$ ko`rinishidagi matritsalarni mos holda ikkinchi va uchinchi tartibli kvadrat matritsalar deb ata-ladi.
+
+Bundan keyingi o`rinlarda  bir qator ta'riflar uchinchi tartibli matritsalar uchun beriladi; biroq ularni ikkinchi tartibli matritsalar uchun ham qo`llash qiyinchilik tug`dirmaydi.
+
+Agar kvadrat matritsaning elementlari $a_{mn}=a_{nm}$ shartni qanoatlantirsa, bunday matritsalarni simmetrik matritsalar deb ataladi.
+
+Quyidagi ikki matritsa
+$$A=\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}\ \ \mbox{va}\ \ B=\begin{pmatrix}
+b_{11}&b_{12}&b_{13}\\
+b_{21}&b_{22}&b_{23}\\
+b_{31}&b_{32}&b_{33}\\
+\end{pmatrix}$$
+faqatgina ularning mos elementlari teng bo`lganda, ya'ni $a_{mn}=b_{mn}\ (m,\ n=1,2,3,\ldots)$ shart bajarilgandagina teng ($A=B$) bo`ladi.
+
+$A$ va $B$ matritsaning yig`indisi quyidagi tenglik orqali ifodalanadi:
+$$\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}
+	+\begin{pmatrix}
+		b_{11}&b_{12}&b_{13}\\
+		b_{21}&b_{22}&b_{23}\\
+		b_{31}&b_{32}&b_{33}\\
+	\end{pmatrix}=\begin{pmatrix}
+	a_{11}+b_{11}&a_{12}+b_{12}&a_{13}+b_{13}\\
+	a_{21}+b_{21}&a_{22}+b_{22}&a_{23}+b_{23}\\
+	a_{31}+b_{31}&a_{32}+b_{32}&a_{33}+b_{33}
+\end{pmatrix}
+$$
+$A$ matritsani $m$ songa ko`paytirish:
+$$m\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}=\begin{pmatrix}
+ma_{11}&ma_{12}&ma_{13}\\
+ma_{21}&ma_{22}&ma_{23}\\
+ma_{31}&ma_{32}&ma_{33}
+\end{pmatrix}$$
+
+$A$ va $B$ matritsalarning ko`paytmasi:
+\begin{multline*}
+	AB=\begin{pmatrix}
+		a_{11}&a_{12}&a_{13}\\
+		a_{21}&a_{22}&a_{23}\\
+		a_{31}&a_{32}&a_{33}
+	\end{pmatrix}\begin{pmatrix}
+		b_{11}&b_{12}&b_{13}\\
+	b_{21}&b_{22}&b_{23}\\
+	b_{31}&b_{32}&b_{33}\\
+\end{pmatrix}
+=\begin{pmatrix}
+	\sum\limits_{j=1}^{3}a_{1j}b_{j1}&\sum\limits_{j=1}^{3}a_{1j}b_{j2}&\sum\limits_{j=1}^{3}a_{1j}b_{j3}\\
+	\sum\limits_{j=1}^{3}a_{2j}b_{j1}&\sum\limits_{j=1}^{3}a_{2j}b_{j2}&\sum\limits_{j=1}^{3}a_{2j}b_{j3}\\
+	\sum\limits_{j=1}^{3}a_{3j}b_{j1}&\sum\limits_{j=1}^{3}a_{3j}b_{j2}&\sum\limits_{j=1}^{3}a_{3j}b_{j3}\\
+\end{pmatrix}
+\end{multline*}
+ya'ni, ko`paytma-matritsaning $i$-satr va $k$-ustunda turgan elementi, $A$ matritsa $i$-satrining $B$ matritsa $k$-ustuni elementlari bilan ko`paytmalarining yig`indisiga teng.
+
+Umumiy holda kki matritsa ko`paytmasi uchun o`rin almashtirish qoidasi bajarilmaydi, ya'ni $AB\ne BA$. 
+
+Barcha elementlari nolga teng bo`lgan matritsa nol matritsa deyiladi:
+$$\begin{pmatrix}
+	0&0&0\\
+	0&0&0\\
+	0&0&0
+\end{pmatrix}=0$$
+Ushbu matritsaning ixtiyoriy $A$ matritsa bilan yig`indisi shu $A$ matritsaning o`ziga teng: $A+0=A$.
+
+$$E=\begin{pmatrix}
+	1&0&0\\
+	0&1&0\\
+	0&0&1
+\end{pmatrix}$$ ko`rinishidagi matritsani birlik matritsa deyiladi.
+
+Ushbu matritsani ixtiyoriy $A$ matritsaga ko`paytirilsa, shu matritsaning o`zi hosil bo`ladi: $EA=AE=A$. Birlik matritsada chiziqli almashtirish ayniyat ko`rinishiga keladi: $x=x^\prime$, $y=y^\prime$, $z=z^\prime$. 
+
+Agar $A$ va $B$ matritsalarning ko`paytmasi uchun $AB=BA=E$ shart bajarilsa, $B$ matritsa $A$ matritsa uchun teskari matritsa dab ataladi.
+
+$A$ matritsaga teskari bo`lgan matritsani $A^{-1}$ ko`rinishida ifodalanadi. Masalan, $B=A^{-1}$.
+
+Har qanday aynimagan kvadrat matritsa $A$ ning teskari matritsasi mavjud. Teskari matritsa quyidagi formula orqali aniqlanadi:
+$$A^{-1}\begin{pmatrix}
+	A_{11}/D_A&	A_{21}/D_A&	A_{31}/D_A\\
+	A_{21}/D_A&	A_{22}/D_A&	A_{23}/D_A\\
+	A_{31}/D_A&	A_{32}/D_A&	A_{33}/D_A\\
+\end{pmatrix}$$
+bu yerda $A_{mn}$ -- matritsa $a_{mn}$ elementining algebraik to`ldiruvchisi. Ya'ni $A$ matritsa determinantidagi $m$-satr va $n$-ustunni o`chirib tashlashdan hosil bo`lgan ikkinchi tartibli minorning $(-1)^{m+n}$ ga ko`paytmasi.
+
+$$X=\begin{pmatrix}
+	x_1\\x_2\\x_3
+\end{pmatrix}$$
+ko`rinishidagi matritsalarni ustun-matritsa deb aytiladi. 
+
+$AX$ ko`paytma quyidagi tenglikdan aniqlanadi:
+$$AX=\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}\begin{pmatrix}
+x_1\\x_2\\x_3
+\end{pmatrix}=\begin{pmatrix}
+a_{11}x_1+a_{12}x_2+a_{13}x_3\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3\\
+\end{pmatrix}$$
+
+$$\begin{cases}
+	a_{11}x_1+a_{12}x_2+a_{13}x_3=b_1\\
+	a_{21}x_1+a_{22}x_2+a_{23}x_3=b_2\\
+	a_{31}x_1+a_{32}x_2+a_{33}x_3=b_3\\
+\end{cases}$$
+ko`rinishidagi tenglamalar sistemasini $AX=B$ ko`rinishida ham yozish mumkin. Bu yerda
+$$A=\begin{pmatrix}
+		a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix},\ \ X=\begin{pmatrix}
+x_1\\x_2\\x_3
+\end{pmatrix},\ \ B=\begin{pmatrix}
+b_1\\b_2\\b_3
+\end{pmatrix}$$
+
+$$\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}$$
+ko`rinishidagi matritsaning xarakteristik tenglamasi:
+$$\begin{vmatrix}
+	a_{11}-\lambda&a_{12}&a_{13}\\
+	a_{21}&a_{22}-\lambda&a_{23}\\
+	a_{31}&a_{32}&a_{33}-\lambda
+\end{vmatrix}=0$$
+
+Ushbu tenglamaning ildizlari $\lambda_1$, $\lambda_2$, $\lambda_3$ matritsaning xarakteristik sonlari deyiladi; agar boshlang`ich matritsa simmetrik bo`lsa, ushbu sonlar har doim haqiqiy bo`ladi.
+
+$\lambda_1$, $\lambda_2$, $\lambda_3$ lardan bittasining qiymatiga teng $\lambda$ yechimga ega bo`lgan  hamda determinanti nolga teng bo`lgan quyidagi tenglamalar sistemasi, ushbu $\lambda$ songa tegishli bo`lgan $(\xi_1;\ \xi_2;\ \xi_3)$ sonlar uchligini aniqlaydi:
+
+	$$
+\begin{cases}(a_{11}-\lambda)\xi_1+a_{12}\xi_2+a_{13}\xi_3=0\\
+	a_{21}\xi_1+(a_{22}-\lambda)\xi_2+a_{23}\xi_3=0\\
+	a_{31}\xi_1+a_{32}\xi_2+(a_{33}-\lambda)\xi_3=0
+\end{cases}
+	$$
+
+Ushbu sonlar uchligi $(\xi_1;\ \xi_2;\ \xi_3)$ matritsaning xususiy vektori deb ataladigan $\textbf{r}=\xi_1\textbf{i}+\xi_2\textbf{j}+\xi_3\textbf{k}$ vektorni aniqlaydi. 
+
+
+\begin{enumerate}\setcounter{enumi}{394}
+	
+	\item $x=x^\prime+y^\prime+z^\prime$, $y=x^\prime+y^\prime$, $z=x^\prime$ chiziqli almashtirish formulalari hamda $x^\prime$, $y^\prime$, $z^\prime$ koordinata sistemasida nuqtalarning koordinatalari: $(1;-1;1)$, $(3;-2;-1)$, $(-1;-2;-3)$ berilgan. Ushbu nuqtalarning $x,\ y,\ z$ koordinatalar sistemasidagi koordinatalarini aniqlang.
+	
+	$\triangle$ Nuqtalarning koordinatalarini almashtirish formulalariga qo`yib, quyidagi tengliklarni hosil qilamiz: agar $x^\prime=1,\ y^\prime=1,\ z^\prime=1$ bo`lsa, $x=1,\ y=0,\ z=1$, ya'ni $(1;0;1)$; agar $x^\prime=3,\ y^\prime=-2,\ z^\prime=-1$ bo`lsa, $x=0,\ y=1,\ z=3$, ya'ni $(0;1;3)$; agar $x^\prime=-1,\ y^\prime=-2,\ z^\prime=-1$ bo`lsa, $x=-6,\ y=-3,\ z=-1$, ya'ni $(-6;-3;-1).\ \blacktriangle$
+	
+	\item Oldingi masalada $x$, $y$, $z$ koordinatalardan $x^\prime$, $y^\prime$, $z^\prime$ koordinatalarga o`tish uchun chiziqli almashtirish formulalarini yozing.
+	
+	$\triangle$ Uchinchi tenglikdan $x^\prime=x$ ekanligi ma'lum; ikkinchi tenglikdan uchinchi tenglikni ayiramiz: $y^\prime=y-z$; birinchi tenglikdan ikkinchi tenglikni ayiramiz: $z^\prime=x-y.\ \blacktriangle$ 
+	
+	\item $x=x^\prime+2y^\prime$, $y=3x^\prime+4y^\prime$ ko`rinishidagi chiziqli almashtirish formulalari berilgan. Qaysi nuqtalarda uning koordinatalari o`zgarmaydi?
+	
+	$\triangle$ $x=x^\prime$ va $y=y^\prime$ uchun $x$ va $y$ larni topish kerak. Ya'ni, $x=x+2y$, $y=3x+4y$. U holda, $x=x^\prime=0$, $y=y^\prime=0.\ \blacktriangle$
+	
+	\item Qaysi nuqtalarda $x=3x^\prime-2y^\prime$, $y=5x^\prime-4y^\prime$ chiziqli almashtirish koordinatalari o`zgarmaydi?
+	
+	$\triangle$ Masala shartiga binoan, $x=3x-2y$, $y=5x-4y$. Ya'ni chiziqli almashtirish bir xil koordinatali  $(t;t)$ nuqtalarda o`zgarmaydi. $\blacktriangle$
+	
+	\item Matritsalar yig`indisini hisoblang:
+	$$A=\begin{pmatrix}
+		3&5&7\\
+		2&-1&0\\
+		4&3&2
+	\end{pmatrix},\ \ B=\begin{pmatrix}
+	1&2&4\\
+	2&3&-2\\
+	-1&0&1
+\end{pmatrix}$$
+
+$$\triangle\ A+B=\begin{pmatrix}
+	3+1&5+2&7+4\\
+	2+2&-1+3&0-2\\
+	4-1&3+0&2+1
+	
+\end{pmatrix}=\begin{pmatrix}
+4&7&11\\
+4&2&-2\\
+3&3&3
+\end{pmatrix}.\ \blacktriangle$$
+
+\item $$A=\begin{pmatrix}
+	3&5\\
+	4&1
+\end{pmatrix},\ \ B=\begin{pmatrix}
+2&3\\
+1&-2
+\end{pmatrix}$$ bo`lsa, $2A+5B$ ni hisoblang.
+
+$\triangle$
+$$2A=\begin{pmatrix}
+	6&10\\
+	8&2
+\end{pmatrix},\ \ 5B=\begin{pmatrix}
+10&15\\
+5&-10
+\end{pmatrix},\ \ 2A+5B=\begin{pmatrix}
+16&25\\
+13&-8
+\end{pmatrix}.\ \blacktriangle$$
+
+\item Agar 
+$$A=\begin{pmatrix}
+	1&3&1\\
+	2&0&4\\
+	1&2&3
+	\end{pmatrix}, \mbox{va}\ \ B=\begin{pmatrix}
+	2&1&0\\
+	1&-1&2\\
+	3&2&1
+\end{pmatrix}$$ bo`lsa, $AB$ va $BA$ ni hisoblang.
+
+$$\triangle\ AB=\begin{pmatrix}
+	1\cdot2+3\cdot1+1\cdot3&1\cdot1+3(-1)+1\cdot2&1\cdot0+3\cdot2+1\cdot1\\
+	2\cdot2+0\cdot1+4\cdot3&2\cdot1+0(-1)+4\cdot2&2\cdot0+0\cdot2+4\cdot1\\
+	1\cdot2+2\cdot1+3\cdot3&1\cdot1+2(-1)+3\cdot2&1\cdot0+2\cdot2+3\cdot1
+\end{pmatrix}=\begin{pmatrix}
+8&0&7\\
+16&10&4\\
+13&5&7
+\end{pmatrix}$$
+
+$$BA=\begin{pmatrix}
+	2\cdot1+1\cdot2+0\cdot1& 2\cdot3+1\cdot0+0\cdot2&2\cdot1+1\cdot4+0\cdot3\\
+	1\cdot1-1\cdot2+2\cdot1& 1\cdot3-1\cdot0+2\cdot2&1\cdot1-1\cdot4+2\cdot3\\
+	3\cdot1+2\cdot2+1\cdot1& 3\cdot3+2\cdot0+1\cdot2& 3\cdot1+2\cdot4+1\cdot3
+\end{pmatrix}=\begin{pmatrix}
+4&6&6\\
+1&7&3\\
+8&11&14
+\end{pmatrix}.\ \blacktriangle$$
+
+\item Agar $A=\begin{pmatrix}
+	3&2\\1&4\end{pmatrix}$ bo`lsa, $A^3$ ni toping.
+
+$$\triangle\ A^2=\begin{pmatrix}
+	3&2\\1&4\end{pmatrix}\begin{pmatrix}
+	3&2\\1&4
+\end{pmatrix}=\begin{pmatrix}
+9+2&6+8\\
+3+4&2+16
+\end{pmatrix}=\begin{pmatrix}
+11&14\\
+7&18
+\end{pmatrix}$$
+$$A^3=A^2\cdot A\begin{pmatrix}
+	11&14\\7&18
+\end{pmatrix}\begin{pmatrix}
+3&2\\1&4
+\end{pmatrix}=\begin{pmatrix}
+33+14&22+56\\21+18&14+72
+\end{pmatrix}=\begin{pmatrix}
+47&78\\39&86
+\end{pmatrix}.\ \blacktriangle$$
+
+\item Matritsa - ko`phadning qiymatini hisoblang: $2A^2+3A+5E$. Bu yerda $A=\begin{pmatrix}
+	1&1&2\\1&3&1\\4&1&1
+\end{pmatrix}$, $E$ - uchinchi tartibli birlik matritsa.
+
+$$\triangle A^2=\begin{pmatrix}
+	1&1&2\\1&3&1\\4&1&1
+\end{pmatrix}\begin{pmatrix}
+1&1&2\\1&3&1\\4&1&1
+\end{pmatrix}=\begin{pmatrix}
+10&6&5\\8&11&6\\9&8&10
+\end{pmatrix},\ \ 2A^2=\begin{pmatrix}
+20&12&10\\16&22&12\\18&16&20
+\end{pmatrix},$$
+$$3A=\begin{pmatrix}
+	3&3&6\\3&9&3\\12&3&3
+\end{pmatrix},\ \ 5E=5\begin{pmatrix}
+1&0&0\\0&1&0\\0&0&1
+\end{pmatrix}=\begin{pmatrix}
+5&0&0\\0&5&0\\0&0&5
+\end{pmatrix},$$
+$$2A^2+3A+5E=\begin{pmatrix}
+	28&15&16\\19&36&15\\30&19&28
+\end{pmatrix}.\ \blacktriangle$$
+
+\item Ikkita chiziqli almashtirish formulalari berilgan: $x=a_{11}x^\prime+a_{12}y^\prime$, $y=a_{21}x^\prime+a_{22}y^\prime$ va $x^\prime=b_{11}x^{\prime\prime}+b_{12}y^{\prime\prime}$, $y^\prime=b_{21}x^{\prime\prime}+b_{22}y^{\prime\prime}$. Ikkinchi almashtirish formulasidan $x^\prime$ va $y^\prime$ lar-ning qiymatlarini birinchi formulaga qo`yib, $x$ va $y$ ni $x^{\prime\prime}$ hamda $y^{\prime\prime}$ orqali ifodalash mumkin bo`ladi. Ushbu hosil bo`lgan chiziqli almashtirish matritsasining birinchi va ikkinchi almashtirishlar matritsalari ko`paytmasiga teng ekanligini isbotlang.
+
+$\triangle$
+Masala shartidan ma'lumki,
+$$x=a_{11}(b_{11}x^{\prime\prime}+b_{12}y^{\prime\prime})+a_{12}(b_{21}x^{\prime\prime}+b_{22}y^{\prime\prime})=(a_{11}b_{11}+a_{12}b_{12})x^{\prime\prime}+(a_{11}b_{12}+a_{12}b_{22})y^{\prime\prime}$$
+$$y=a_{21}(b_{11}x^{\prime\prime}+b_{12}y^{\prime\prime})+a_{22}(b_{21}x^{\prime\prime}+b_{22}y^{\prime\prime})=(a_{21}b_{11}+a_{22}b_{21})x^{\prime\prime}+(a_{21}b_{12}+a_{22}b_{22})y^{\prime\prime}$$
+
+Hosil bo`lgan chiziqli almashtirish matritsasi quyidagi ko`rinishda bo`ladi:
+$$\begin{pmatrix}
+	a_{11}b_{11}+a_{12}b_{21}&a_{11}b_{12}+a_{12}b_{22}\\
+	a_{21}b_{11}+a_{22}b_{21}&a_{21}b_{12}+a_{22}b_{22}\\
+\end{pmatrix}$$
+Ya'ni ushbu matritsa $\begin{pmatrix}
+	a_{11}&a_{12}\\a_{21}&a_{22}
+\end{pmatrix}$ hamda $\begin{pmatrix}
+b_{11}&b_{12}\\b_{21}&b_{22}
+\end{pmatrix}$ matritsalarning ko`paytmasidir. $\blacktriangle$
+\item $A=\begin{pmatrix}
+	3&2&2\\1&3&1\\5&3&4
+\end{pmatrix}$ matritsaga teskari bo`lgan matritsani toping.
+
+$\triangle$ $A$ matritsaning determinantini hisoblaymiz:
+$$D_A=\begin{vmatrix}
+	3&2&2\\1&3&1\\5&3&4
+\end{vmatrix}=27+2-24=5.$$
+	Ushbu determinant elementlarining algebraik to`ldiruvchilarini aniqlaymiz:
+	$$A_{11}=\begin{vmatrix}
+		3&1\\3&4
+	\end{vmatrix}=9,\ \ A_{21}=-\begin{vmatrix}
+	2&2\\3&4
+\end{vmatrix}=-2,\ \ A_{31}=\begin{vmatrix}
+2&2\\3&1
+\end{vmatrix}=-4$$
+$$A_{12}=-\begin{vmatrix}
+	1&1\\5&4
+\end{vmatrix}=1,\ \ A_{22}=\begin{vmatrix}
+3&2\\5&4
+\end{vmatrix}=2,\ \ A_{32}=-\begin{vmatrix}
+3&2\\1&1
+\end{vmatrix}=-1,$$
+$$A_{13}=\begin{vmatrix}
+	1&3\\5&3
+\end{vmatrix}=-12,\ \ A_{23}=-\begin{vmatrix}
+3&2\\5&3\end{vmatrix}=1,\ \ A_{33}=\begin{vmatrix}
+3&2\\1&3
+\end{vmatrix}=7.
+$$
+Shunday qilib,
+$$A^{-1}=\begin{pmatrix}
+	9/5&-2/5&-4/5\\
+	1/5&2/5&-1/5\\
+	-12/5&1/5&7/5
+\end{pmatrix}.\ \blacktriangle
+	$$
+	
+	\item Tenglamalar sistemasini yeching:
+	$$\begin{cases}
+		2x+3y+2z=9\\
+		x+2y-3z=14\\
+		3x+4y+z=16
+	\end{cases}$$
+
+$\triangle$ Ushbu tenglamalar sistemasini $AX=B$ ko`rinishida qayta yozib olamiz. Bu yerda
+$$A=\begin{pmatrix}
+	2&3&2\\
+	1&2&-3\\
+	3&4&1
+\end{pmatrix},\ \ X=\begin{pmatrix}
+x\\y\\
+z
+\end{pmatrix},\ \ B=\begin{pmatrix}
+9\\14\\16
+\end{pmatrix}$$
+Ushbu  tenglamaning yechimi $X=A^{-1}B$ ko`rinishda bo`ladi. Demak, $A^{-1}$ ni hisoblashimiz zarur. Buning uchun eng birinchi navbatda:
+$$D_A=\begin{vmatrix}
+		2&3&2\\
+	1&2&-3\\
+	3&4&1
+\end{vmatrix}=28-30-4=-5.$$
+Endi esa determinantning algebraik to`ldiruvchilarini aniqlaymiz:
+$$A_{11}=\begin{vmatrix}
+	2&-3\\4&1
+\end{vmatrix}=14,\ \ A_{21}=-\begin{vmatrix}
+3&2\\4&1
+\end{vmatrix}=5,\ \ A_{31}=\begin{vmatrix}
+3&2\\2&-3
+\end{vmatrix}=-13$$
+
+$$A_{12}=-\begin{vmatrix}
+	1&-3\\3&1\end{vmatrix}=-10,\ \ A_{22}=\begin{vmatrix}
+	2&2\\3&1
+\end{vmatrix}=-4,\ \ A_{32}=-\begin{vmatrix}
+2&2\\1&-3
+\end{vmatrix}=8,
+	$$
+	$$A_{13}=\begin{vmatrix}
+		1&2\\3&4
+	\end{vmatrix}=-2,\ \ A_{23}=-\begin{vmatrix}
+		2&3\\3&4\end{vmatrix}=1,\ \ A_{33}=\begin{vmatrix}
+		2&3\\1&2
+	\end{vmatrix}=1.$$
+Shunday qilib, 
+$$A^{-1}=-\frac{1}{6}\begin{pmatrix}
+	14&5&-13\\-10&-4&8\\-2&1&1
+\end{pmatrix}$$
+Bu yerdan 
+$$X=-\frac{1}{6}\begin{pmatrix}
+	14&5&-13\\-10&-4&8\\-2&1&1
+\end{pmatrix}\begin{pmatrix}
+9&14&16
+\end{pmatrix}=-\frac{1}{6}\begin{pmatrix}
+126+70-208\\
+-90-56+128\\
+18+14+16
+\end{pmatrix}=-\frac{1}{6}\begin{pmatrix}
+-12\\-18\\12
+\end{pmatrix}=\begin{pmatrix}
+2\\3\\-2
+\end{pmatrix}
+$$
+Demak, $x=2$, $y=3$, $z=-2.\ \blacktriangle$
+
+\item 
+$\begin{pmatrix}
+	5&2\\4&3
+\end{pmatrix}$ ko`rinishidagi matritsa berilgan. Uning xarakteristik vektorlari va xarakteristik sonlarini toping.
+
+$\triangle$ Xarakteristik tenglamani tuzamiz:
+$$\begin{vmatrix}
+	5-\lambda&2\\4&3-\lambda
+\end{vmatrix}=0,\ \mbox{yoki}\ \ (5-\lambda)(3-\lambda)-8=0,\ \mbox{ya'ni}\ \ \lambda^2-8\lambda+7=0.$$
+
+Xarakteristik sonlar: $\lambda_1=1$ va $\lambda_2=7$. Birinchi xarakteristik songa mos keladigan xususiy vektorni quyidagi tenglamalar sistemasidan aniqlaymiz:
+$$\begin{cases}
+	(5-\lambda_1)\xi_{1}^{\prime}+2\xi_2^\prime=0\\
+	4\xi_1^\prime+(3-\lambda_1)\xi_2^\prime=0
+\end{cases}$$
+$\lambda_1=1$ bo`lgani uchun $\xi_1^\prime$ va $\xi_2^\prime$ lar o`zaro $2\xi_1^\prime+\xi_{2}^{\prime}$ ko`rinishida bog`langan. $\xi_1^\prime=\alpha$ ($\alpha\ne0$ -  ixtiyoriy son) deb hisoblab, $\xi_2^\prime=-2\alpha$ ni hosil qilamiz. U holda $\lambda_1$ xarakteristik songa mos keluvchi xarakteristik vektor tenglamasi: $\textbf{r}_1=\alpha\textbf{i}-2\alpha\textbf{j}$  bo`ladi.
+
+Endi ikkinchi xususiy vektorni aniqlaymiz.
+
+$$\begin{cases}
+	(5-\lambda_2)\xi_{1}^{\prime\prime}+2\xi_2^{\prime\prime}=0\\
+	4\xi_1^{\prime\prime}+(3-\lambda_2)\xi_2^{\prime\prime}=0
+\end{cases}$$
+$\lambda_2=7$ qiymatni tenglamalar sistemasiga qo`yib, $\xi_{1}^{\prime\prime}-\xi_{2}^{\prime\prime}=0$ munosabatni hosil qilamiz. Ya'ni, $\xi_{1}^{\prime\prime}=\xi_{2}^{\prime\prime}=\beta\ne0$. U holda ikkinchi xarakteristik songa mos keladigan xususiy vektor: $\textbf{r}_2=\beta\textbf{i}+\beta\textbf{j}$ tenglama bilan ifodalanadi. $\blacktriangle$
+
+
+\item $\begin{pmatrix}
+	5&-171\\-1&5&-1\\1&-1&3
+\end{pmatrix}$ ko`rinishidagi matritsa berilgan. Uning xarakteristik sonlari va xarakteristik vektorlarini toping.
+
+$\triangle$ Xarakteristik tenglamani tuzamiz:
+$$\begin{vmatrix}
+	3-\lambda&-1&1\\
+	-1&5-\lambda&-1\\
+	1&-1&3-\lambda
+\end{vmatrix}=0$$
+yoki 
+$$(3-\lambda)\left[(5-\lambda)(3-\lambda)-1\right]+(-3+\lambda+1)+(1-5+\lambda)=0$$
+Elementar almashtirishlardan so`ng tenglama $(3-\lambda)(\lambda^2-8\lambda+12)=0$ ko`rinishga keladi. Bu yerdan $\lambda_1=2$, $\lambda_2=3$, $\lambda_3=6$.
+
+\item Ikkita chiziqli almashtirish formulalari berilgan: $x=a_{11}x^\prime+a_{12}y^\prime+a_{13}z^\prime$, $y=a_{21}x^\prime+a_{22}y^\prime+a_{23}z^\prime$,
+$z=a_{31}x^\prime+a_{32}y^\prime+a_{33}z^\prime$
+va 
+$x^\prime=b_{11}x^{\prime\prime}+b_{12}y^{\prime\prime}+b_{13}z^{\prime\prime}$,
+$y^\prime=b_{21}x^{\prime\prime}+b_{22}y^{\prime\prime}+b_{23}z^{\prime\prime}$,
+$z^\prime=b_{31}x^{\prime\prime}+b_{32}y^{\prime\prime}+b_{33}z^{\prime\prime}$
+. Ikkinchi almashtirish formulasidan $x^\prime$ va $y^\prime$ larning qiymatlarini birinchi formulaga qo`yib, $x$ va $y$ ni $x^{\prime\prime}$ hamda $y^{\prime\prime}$ orqali ifodalash mumkin bo`ladi. Ushbu hosil bo`lgan chiziqli almashtirish matritsasining birinchi va ikkinchi almashtirishlar matritsalari ko`paytmasiga teng ekanligini isbotlang.
+\end{enumerate}
+
+\section{2-tartibli egri chiziq va sirtlarning umumiy tenglamalarini kanonik ko`rinishga keltirish}
+\section{Matritsa rangi. Ekvivalent matritsalar}
+\section{n ta noma'lumli m ta chiziqli tenglamalar sistemasini yechish}
+\section{Chiziqli tenglamalar sistemasini Gauss usulida yechish}
+
+
+\begin{enumerate}\setcounter{enumi}{443}
+	\item Tenglamalar sistemasini yeching:
+	$$\begin{cases}
+		36,47x+5,28y+6,34z=12,26&\ (a)\\
+		7,33x+28,74y+5,86z=15,15&\ (b)\\
+		4,63x+6,31y+26,17z=25,22&\ (d)
+	\end{cases}$$
+$\triangle$ (a) tenglamani 36,47 ga bo`lamiz va quyidagini hosil qilamiz:
+$$x+0,1447y+0,1738z=0,3361\ \ \ (*)$$
+
+(*) tenglamani 7,33 ga ko`paytiramiz va natijani (b) dan ayiramiz:
+$$27,6793y+4,586z=12,6864$$ 
+So`ngra (*) tenglamani 4,63 ga ko`paytiramiz va natijani (d) dan ayiramiz:
+$$5,64y+25,3653z=23,6639$$
+
+Shunday qilib, tenglamalar sistemasi quyidagi ko`rinishga keladi:
+$$\begin{cases}
+	27,6793y+4,586z=12,6864&\ (e)\\
+	5,64y+25,3653z=23,6639&\ (f)\\
+\end{cases}$$
+(e) tenglamani 27,68 ga bo`lamiz:
+$$y+0,1657z=0,4583\ \ \ (**)$$
+(**) tenglamani 5,64 ga ko`paytirib, natijani (f) dan ayiramiz va $24,4308z=21,0791$ hosil bo`ladi. Bundan $z=0,8628$. U holda 
+$$y=0,4583-0,1657\cdot0,8628=0,3153$$
+$$x=0,3361-0,1447\cdot0,3153-0,1738\cdot0,8628=0,1405$$
+Tenglamalar sistemasining ildizlari: $x=0,1405$, $y=0,3153$ va $z=0,8628$. 
+
+Amalda tenglamalar sistemasining o`zini emas, balki uning koeffitsiyentlari hamda ozod hadlaridan tuzilgan matritsani zinapoyasimon ko`rinishga keltirish qulayroq:
+$$\begin{pmatrix}
+36,47&5,28&6,34|&12,26\\
+7,33&28,74&5,86|&15,15\\
+4,63&6,31&26,17|&25,22
+\end{pmatrix}
+$$
+\end{enumerate}
+Tenglamalar sistemasini yeching:
+\begin{enumerate}\setcounter{enumi}{445}
+	\item $\begin{cases}
+		2x_{1}+x_{2}-x_{3}=5\\
+		x_{1}-2x_{2}+2x_{3}=-5\\
+		7x_{1}+x_{2}-x_{3}=10
+	\end{cases}$
+\inlineitem $\begin{cases}
+	x_{1}+x_{2}-x_{3}+x_{4}=4\\
+	2x_{1}-x_{2}+3x_{3}-2x_{1}=1\\
+	x_{1}-x_{3}+2x_{4}=6\\
+	3x_{1}-x_{2}+x_{3}-x_{4}=0
+\end{cases}$
+
+\item $\begin{cases}
+	3x_{1}-x_{2}+x_{3}+2x_{5}=18\\
+	2x_{1}-5x_{2}+x_{4}+x_{5}=-7\\
+	x_{1}-x_{4}+2x_{5}=8\\
+	2x_{2}+x_{3}+x_{4}-x_{5}=10\\
+	x_{1}+x_{2}-3x_{3}+x_{4}=1
+\end{cases}$
+\inlineitem $\begin{cases}
+	4x_{1}+2x_{2}+3x_{3}=-2\\
+	2x_{1}+8x_{2}-x_{3}=8\\
+	9x_{1}+x_{2}+8x_{3}=0\\
+\end{cases}$
+
+\item $\begin{cases}
+	0,04x-0,08y+4z=20\\
+	4x+0,24y_0,08z=8\\
+	0,09x+3y-0,15z=9
+\end{cases}$
+\inlineitem $\begin{cases}
+	3,21x+0,71y+0,34z=6,12\\
+	0,43x+4,11y+0,22z=5,71\\
+	0,17x+0,16y+4,73z=7,06
+\end{cases}$
+\end{enumerate}
+
+\section{Chiziqli tenglamalar sistemasini Jordan-Gauss usulida yechish}
+
+
+
+
+
+
+\begin{enumerate} \setcounter{enumi}{451}
+	\item Chiziqli tenglamalar sistemasining matritsasi quyidagi ko`rinishga ega:
+	$$A=\begin{pmatrix}
+	5&4&6&-1&7\\
+	8&1&3&2&0\\
+	0&1&5&3&-1\\
+	7&-6&5&-4&3\\	
+	\end{pmatrix}$$
+	Ushbu tenglamalar sistemasini Jordan-Gauss usulida yechish paytida ruxsat etilgan element sifatida $a_{23}=3$ element tanlandi. Transponirlangan matritsaning $a_{24}^{\prime}$, $a_{13}^{\prime}$, $a_{44}^{\prime}$ elementlarini toping.
+	
+	$\triangle$ $a_{24}$ - ruxsat etilgan satr elementi bo`lgani uchun $a_{24}^{\prime}=a_{24}$ bo`ladi. $a_{13}$ element ruxsat etilgan  ustunga tegishli, demak $a_{13}^{\prime}=0$. $a_{44}^{\prime}$ elementni  to`rtburchak qoidasidan foydalanib aniqlaymiz:
+	$$A=\begin{pmatrix}
+		5&4&6&-1&7\\
+		8&1&\boxed{3}\ldots&2&0\\
+		0&1&\vdots5\ \ \ \ \ \vdots&3&-1\\
+		7&-6&\vdots5\ldots\vdots&-4&3\\
+	\end{pmatrix}$$
+	
+	$$a_{44}^{\prime}=a_{44}-\frac{a_{24}a_{43}}{a_{23}}=-4-\frac{2\cdot5}{3}=-7\frac{1}{3}.\ \blacktriangle$$
+	\item Tenglamalar sistemasini yeching:
+	$$\begin{cases}
+		x_{1}+x_{2}-3x_{3}+2x_{4}=6\\
+		x_{1}-2x_{2}-x_{4}=-6\\
+		x_{2}+x_{3}+3x_{4}=16\\
+		2x_{1}-3x_{2}+2x_{3}=6
+	\end{cases}$$
+	$\triangle$ Quyidagi jadvalga tenglama koeffitsiyentlari, ozod hadlar, koeffitsiyentlar va ozod hadlar yig`indisi ($\Sigma$- nazorat ustuni) ni yozamiz:
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+			$\boxed{1}$&1&-3&2&6&7\\ \hline
+			1&-2&0&-1&-6&-8\\ \hline
+			0&1&1&3&16&21\\ \hline
+			2&-3&2&0&6&7\\ \hline
+		\end{tabular}
+	\end{center}
+Ruxsat etilgan element sifatida 1-tenglamadagi $x_{1}$ ning oldida turgan koeffitsiyentni tanladik. Ushbu element joylashgan satrni o`zgarishsiz yozamiz. 1-ustundagi hamma elementlarni (ruxsat etilgan elementdan tashqari) nollar bilan almashtiramiz. To`rtburchak usulini qo`llagan holda, jadvalning qolgan kataklarini to`ldiramiz (ushbu qoida $\Sigma$ ustun uchun ham o`rinli):
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		1&1&-3&2&6&7\\ \hline
+		0&-3&3&-3&-12&-15\\ \hline
+		0&1&1&3&16&21\\ \hline
+		0&-5&8&-4&-6&-7\\ \hline
+	\end{tabular}
+\end{center}
+Nazorat ustunida mos satr elementlarining yig`indisi yozilgan. 2-satr elementlarini $-3$ ga bo`lamiz va quyidagi jadval hosil bo`ladi:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		1&1&-3&2&6&7\\ \hline
+		0&$\boxed{1}$&-1&1&4&5\\ \hline
+		0&1&1&3&16&21\\ \hline
+		0&-5&8&-4&-6&-7\\ \hline
+	\end{tabular}
+\end{center}
+
+2-satrning 2-elementini ruxsat etilgan element sifatida tanlaymiz. 1-ustunni o`zgarishsiz qayta yozamiz, 2-ustunning barcha elementlarini (ruxsat etilgan elementdan tashqari) nollar bilan almashtiramiz. 2-satrni o`zgarishsiz yozib chiqamiz, jadvalning qolgan elementlarini  to`rtburchak usulini qo`llagan holda to`ldirib chiqamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		
+		1&0&-2&1&1&1\\ \hline
+		0&1&-1&1&4&5\\ \hline
+		0&0&2&2&12&16\\ \hline
+		0&0&3&1&14&18\\ \hline
+	\end{tabular}
+\end{center}
+3-satr elementlarini 2 ga bo`lamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		
+		1&0&-2&1&1&1\\ \hline
+		0&1&-1&1&4&5\\ \hline
+		0&0&$\boxed{1}$&1&6&8\\ \hline
+		0&0&3&1&14&18\\ \hline
+	\end{tabular}
+\end{center}
+3-ustundagi 3-elementni ruxsat etilgan element sifatida tanlab, jadvalni qayta yozamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		
+		1&0&0&3&14&18\\ \hline
+		0&1&0&2&10&13\\ \hline
+		0&0&1&1&6&8\\ \hline
+		0&0&0&-2&-4&-6\\ \hline	
+	\end{tabular}
+\end{center}
+
+4-satr elementlarini  $-2$ ga bo`lamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		
+		1&0&0&3&14&18\\ \hline
+		0&1&0&2&10&13\\ \hline
+		0&0&1&1&6&8\\ \hline
+		0&0&0&$\boxed{1}$&2&3\\ \hline	
+	\end{tabular}
+\end{center}
+4-satr 4-elementini ruxsat etilgan element sifatida tanlab jadvalni qayta yozamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{x}$_{1}$&\textbf{x}$_{2}$&\textbf{x}$_{3}$&\textbf{x}$_{4}$&\textbf{b}&$\Sigma$\\ \hline
+		
+		1&0&0&0&8&9\\ \hline
+		0&1&0&0&6&7\\ \hline
+		0&0&1&0&4&5\\ \hline
+		0&0&0&1&2&3\\ \hline
+	\end{tabular}
+\end{center}
+Natijada tenglamalar sistemasi quyidagi ko`rinishga keladi:
+$$\begin{cases}
+	1\cdot x_{1}+0\cdot x_{2}+0\cdot x_{3}+0\cdot x_{4}=8\\
+	0\cdot x_{1}+1\cdot x_{2}+0\cdot x_{3}+0\cdot x_{4}=6\\
+	0\cdot x_{1}+0\cdot x_{2}+1\cdot x_{3}+0\cdot x_{4}=4\\
+	0\cdot x_{1}+0\cdot x_{2}+0\cdot x_{3}+1\cdot x_{4}=2\\
+\end{cases}$$
+ya'ni, $x_{1}=8$, $x_{2}=6$, $x_{3}=4$, $x_{4}=2.\ \blacktriangle$
+	\item Tenglamalar sistemasini yeching:
+	
+	$$\begin{cases}
+		x_{1}+x_{2}-2x_{3}+x_{4}=1\\
+		x_{1}-3x_{2}+x_{3}+x_{4}=0\\
+		4x_{1}-x_{2}-x_{3}-x_{4}=1\\
+		4x_{1}+3x_{2}-4x_{3}-x_{4}=2
+	\end{cases}$$
+
+$\triangle$ Jadvalni tuzib olamiz:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	$\boxed{1}$&1&-2&1&1&2\\ \hline
+	1&-3&1&1&0&0\\ \hline
+	4&-1&-1&-1&1&2\\ \hline
+	4&3&-4&-1&-2&4\\ \hline
+\end{tabular}
+\end{center}
+Ruxsat etilgan element sifatida 1-satr 1-ustunda turgan elementni tanladik. U holda:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		1&1&-2&1&1&2\\ \hline
+		0&-4&3&0&-1&-2\\ \hline
+		0&-5&7&-5&-3&-6\\ \hline
+		0&-1&4&-5&-2&-4\\ \hline	
+	\end{tabular}
+\end{center}
+4-satr elementlarining ishoralarini o`zgartiramiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		1&1&-2&1&1&2\\ \hline
+		0&-4&3&0&-1&-2\\ \hline
+		0&-5&7&-5&-3&-6\\ \hline
+		0&$\boxed{1}$&-4&5&2&4\\ \hline
+	\end{tabular}
+\end{center}
+Endi 4-satr 2-ustunda turgan element ruxsat etilgan element bo`ladi:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		1&0&2&-4&-1&-2\\ \hline
+		0&0&-13&20&7&14\\ \hline
+		0&0&-13&20&7&14\\ \hline
+		0&1&-4&5&2&4\\ \hline
+	\end{tabular}
+\end{center}
+3-satr elementlaridan 2-satr elementlarini ayiramiz va 3-satrni o`chirib tashlaymiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		1&0&2&-4&-1&-2\\ \hline
+		0&0&-13&$\boxed{20}$&7&14\\ \hline
+		0&1&-4&5&2&4\\ \hline
+	\end{tabular}
+\end{center}
+2-satrning 4-elementi -- ruxsat etilgan element:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+	1&0&-0,6&0&0,4&0,8\\ \hline
+	0&0&-13&20&7&14\\ \hline
+	0&1&-0,75&0&0,25&0,5\\ \hline	
+	\end{tabular}
+\end{center}
+Matritsa rangi  3 ga teng. Demak, tenglamalar sistemasida 3 ta  o`zaro bog`liq noma'lumlar: $x_{1}$, $x_{2}$, $x_{4}$ hamda bitta ozod noma'lum $x_{3}$  mavjud. Quyidagi tenglamalar sistemasini tuzamiz:
+$$\begin{cases}
+	1\cdot x_{1}+0\cdot x_{2}-0,6\cdot x_{3}+0\cdot x_{4}=0,4\\
+	0\cdot x_{1}+0\cdot x_{2}-13\cdot x_{3}+20\cdot x_{4}=7\\ 
+	0\cdot x_{1}+1\cdot x_{2}-0,75\cdot x_{3}+0\cdot x_{4}=0,25\\
+\end{cases}$$
+Demak, $x_{1}=0,4+0,6x_{3}$, $x_{2}=0,25+0,75u$, $x_{3}=u$, $x_{4}=0,35+0,65u$.
+bu  yerda $u$ -- ixtiyoriy son. $\blacktriangle$
+
+\item Tenglamalar sistemasini yeching:
+$$\begin{cases}
+	6x-5y+7z+8t=3\\
+	3x+11y+2z+4t=6\\ 
+	3x+2y+3z+4t=1\\
+	x+y+z=0\\
+\end{cases}$$
+$\triangle$ Jadvalni tuzamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		6&-5&7&8&3&19\\ \hline
+		3&11&2&4&6&26\\ \hline
+		3&2&3&4&1&13\\ \hline
+		$\boxed{1}$&1&1&0&0&3\\ \hline
+	\end{tabular}
+\end{center}
+1-ustun 4-elementi -- ruxsat etilgan element.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	0&-11&$\boxed{1}$&8&3&1\\ \hline
+	0&8&-1&4&6&17\\ \hline
+	0&-1&0&4&1&4\\ \hline
+	1&1&1&0&0&3\\ \hline
+\end{tabular}
+\end{center}
+3-ustunning 1-elementi ruxsat etilgan element:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		0&-11&$\boxed{1}$&8&3&1\\ \hline
+		0&-3&0&12&9&18\\ \hline
+		0&-1&0&4&1&4\\ \hline
+		1&12&0&-8&-3&2\\ \hline
+	\end{tabular}
+\end{center}
+3-satr elementlarining ishoralarini o`zgartiramiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		0&-11&1&8&3&1\\ \hline
+		0&-3&0&12&9&18\\ \hline
+		0&$\boxed{1}$&0&-4&-1&-4\\ \hline
+		1&12&0&-8&-3&2\\ \hline
+	\end{tabular}
+\end{center}
+2-ustunning 3-elementi ruxsat etilgan element:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		0&0&1&-36&-8&-43\\ \hline
+		0&0&0&0&6&6\\ \hline
+		0&$\boxed{1}$&0&-4&-1&-4\\ \hline
+		1&0&0&40&9&50\\ \hline
+	\end{tabular}
+\end{center}
+Natijada quyidagi tenglamalar sistemasini hosil qilamiz:
+$$\begin{cases}
+0\cdot x+0\cdot y+1\cdot z-36t=-8\\ 
+0\cdot x+0\cdot y+0\cdot z-0\cdot t=6\\ 
+0\cdot x+1\cdot y+0\cdot z-4\cdot t=-1\\
+1\cdot x+0\cdot y+0\cdot z+40t=9\\
+\end{cases}
+$$
+E'tibor berilsa, ikkinchi tenglamani $x$, $y$, $z$ va $t$ larning hech qanday qiymati qanoatlantirmaydi. Xulosa qilish mumkinki, berilgan tenglamalar sistemasi va biz hosil qilgan tenglamalar sistemasi bir-biriga ekvivalent emas. $\blacktriangle$
+
+\item $A$ matritsa rangini Jordan-Gauss usulidan foydalanib aniqlang:
+$$A=\begin{pmatrix}
+	7&-1&3&5\\ 
+	1&3&5&7\\
+	4&1&4&6\\
+	3&-2&-1&-1
+\end{pmatrix}$$
+$\triangle$ Jadval tuzamiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		7&-1&3&5&14\\ \hline
+		$\boxed{1}$&3&5&7&16\\ \hline
+		4&1&4&6&15\\ \hline
+		3&-2&-1&-1&-1\\ \hline
+	\end{tabular}
+\end{center}
+Oxirgi ustunda mos satr elementlarining yig`indisi yozilgan. 1-ustunning 2-elementi ruxsat etilgan element:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		0&-22&-32&-44&-98\\ \hline
+		1&3&5&7&16\\ \hline
+		0&-11&-16&-22&-49\\ \hline
+		0&-11&-16&-22&-49\\ \hline
+	\end{tabular}
+\end{center}
+1-satr elementlarini 2 ga bo`lamiz; 4- va 3-satr elementlaridan 1-satr elementlarini ayiramiz va 3- hamda 4-satrni o`chiramiz:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		0&11&16&22&49\\ \hline
+		1&3&5&7&16\\ \hline
+	\end{tabular}
+\end{center}
+Hosil bo`lgan matritsaning ixtiyoriy ikkinchi tartibli determinanti noldan farqli. Demak $r(A)=2.\ \blacktriangle$
+\end{enumerate}
+Tenglamalar sistemasini Jordan-Gauss usulini qo`llagan holda yeching:
+\begin{enumerate}\setcounter{enumi}{456}
+	\item $\begin{cases}
+		x_{1}+2x_{2}+x_{3}=8\\
+		x_{2}+3x_{3}+x_{4}=15\\
+		4x_{1}+x_{3}+x_{4}=11\\
+		x_{1}+x_{2}+5x_{4}=23\\
+		
+	\end{cases}$
+\inlineitem
+$\begin{cases}
+	x_{2}-x_{1}+x_{3}-x_{4}=-2\\
+	x_{1}+2x_{2}-2x_{3}-x_{4}=-5\\
+	2x_{1}-x_{2}-3x_{3}+2x_{4}=-1\\
+	x_{1}+2x_{2}+3x_{3}+6x_{4}=-10\\
+\end{cases}$
+
+\item $\begin{cases}
+	x_{1}+5x_{2}-2x_{3}-3x_{4}=1\\
+	7x_{1}+2x_{2}-3x_{3}-4x_{4}=2\\
+	x_{1}+x_{2}+x_{3}+x_{4}=5\\
+	2x_{1}+3x_{2}2x_{3}-3x_{4}=4\\
+	x_{1}-x_{2}-x_{3}-x_{4}=-2
+\end{cases}$
+\item Jordan-Gauss usulini qo`llagan holda matritsa rangini aniqlang:
+$$A=\begin{pmatrix}
+	1&2&3&1\\
+	2&3&1&3\\
+	3&1&2&5\\
+	2&2&2&3
+\end{pmatrix}$$
+\end{enumerate}
