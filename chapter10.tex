@@ -1,0 +1,334 @@
+\chapter{Aniq integral}
+\section{Aniq integralni hisoblash}
+
+\textbf{Aniq integralning asosiy xossalari}
+
+$1^{\circ}$. $\int\limits_{b}^{a}f(x)\,dx=-\int\limits_{a}^{b}f(x)dx$
+
+$2^{\circ}$. $\int\limits_{a}^{a}f(x)\,dx=0$ 
+
+$3^{\circ}$. $\int\limits_{a}^{b}f(x)dx=\int\limits_{a}^{0}f(x)\,dx+\int\limits_{0}^{b}f(x)\,dx$
+
+$4^{\circ}$. $\int\limits_{a}^{b}\left[f_{1}(x)\pm f_{2}(x)\right]\,dx=\int\limits_{a}^{b}f_{1}(x)\,dx\pm\int\limits_{a}^{b}f_{2}(x)dx$
+
+$5^{\circ}$. $\int\limits_{a}^{b}C\cdot f(x)\,dx=C\cdot\int\limits_{a}^{b}f(x)\,dx$, bu yerda $C$ -- domiy
+
+$6^{\circ}$. Agar $[a,b]$ oraliqda  $m\le f(x)\le M$ bo`lsa, u holda:
+$m(b-a)<\int\limits_{a}^{b}f(x)\,dx<M(b-a)$
+
+\textbf{Aniq integralni hisoblash qoidalari}
+\begin{enumerate}
+	\item Nyuton-Leybnis formulasi:
+	$$\int\limits_{a}^{b}f(x)\,dx=F(x)\Big|_{a}^{b}=F(b)-F(a)$$
+	bu yerda $F(x)$ -- $f(x)$ funksiyaning boshlang`ich funksiyasi, ya'ni $F^{\prime}(x)=f(x)$.
+	\item Bo`laklab integrallash usuli:
+	$$\int\limits_{a}^{b}udv=uv-\int\limits_{a}^{b}vdu$$
+	bu yerda $u=u(x)$, $v=v(x)$ -- $[a;b]$ kesmada uzluksiz integrallanuvchi funksiyalar.
+	\item O`zgaruvchini almashtirish usuli:
+	$$\int\limits_{a}^{b}f(x)\,dx=\int\limits_{\alpha}^{\beta}f[\varphi(t)]\varphi^{\prime}(t)\,dt$$
+	bu yerda $x=\varphi(t)$ -- $\alpha\le t\le\beta$ kesmada o`zining hosilasi $\varphi^{\prime}(t)$ bilan birgalikda uzluksiz bo`lgan funksiya, $a=\varphi(\alpha)$, $b=\varphi(\beta)$, $f[\varphi(t)]$ -- $[\alpha;\beta]$ kesmada uzluksiz bo`lgan funksiya.
+	
+	\item Agar $f(x)$ toq funksiya bo`lsa, ya'ni $f(-x)=-f(x)$, u holda:
+	$$\int\limits_{-a}^{a}f(x)\,dx=0$$
+	
+	Agar $f(x)$ juft funksiya bo`lsa, ya'ni $f(-x)=f(x)$, u holda:
+	$$\int\limits_{-a}^{a}f(x)\,dx=2\int\limits_{a}^{b}f(x)\,dx$$
+\end{enumerate}
+
+\begin{enumerate}
+	\setcounter{enumi}{1537}
+	\item $\int\limits_{0}^{1}x^{2}\, dx$ integralni integral yig`indining limiti ko`rinishida hisoblang: 
+	
+	$\triangle$ bu yerda $f(x)=x^{2}$, $a=0$, $b=1$; $[0;1]$ kesmani $n$ ta teng bo`laklarga bo`lamiz, u holda $\Delta x_{k}=(b-a)/n=1/n$; $\xi_k=x_k$ deb belgilaymiz va quyidagini hosil qilamiz:
+	$$x_0 =0; \ \ x_{1}=\frac{1}{n};\ \ x_{2}=\frac{2}{n};\ \ \ldots;\ \ x_{n-1}=\frac{n-1}{n};\ \ x_{n}=\frac{n}{n}=1;$$
+	$$f(\xi_{1})=\left(\frac{1}{n}\right)^{2};\ \ f(\xi_{2})=\left(\frac{2}{n}\right)^{2};\ldots;\ f(\xi_{n})=\left(\frac{n}{n}\right)^{2};\ \ f(\xi_{k})\Delta x_{k}=\left(\frac{k}{n}\right)^{2}\cdot\frac{1}{n}$$
+	So`ngra,
+	$$\int\limits_{0}^{1}x^{2}\,dx=\lim\limits_{n\to\infty} \frac{1^{2}+2^{2}+\ldots+n^{2}}{n^{3}}=\lim\limits_ {n\to\infty}\frac{n(n+1)(2n+1)}{6n^{3}}=\lim\limits_ {n\to\infty}\frac{\left(1+\frac{1}{n}\right)\left(2+\frac{1}{n}\right)}{6}=\frac{1}{3}$$
+	bu yerda natural sonlar kvadratlarining yig`indisini topish formulasidan foydalanildi. $\blacktriangle$
+	
+	\item Nyuton-Leybnis formulasidan foydalangan holda $\int\limits_{\pi/6}^{\pi/4}\frac{dx}{\cos^{2}x}$ integralni hisoblang.
+	
+	$$\triangle\ \int\limits_{\pi/6}^{\pi/4}\frac{dx}{\cos^{2}x}=\textrm{tg}x\Big|_{\pi/6}^{\pi/4}=\textrm{tg}\frac{\pi}{4}-\textrm{tg}\frac{\pi}{6}=1-\frac{\sqrt{3}}{3}.\ \blacktriangle$$
+	
+	\item Integralni baholang:
+	$$\int\limits_{10}{18}\frac{\cos{x}dx}{\sqrt{1+x^{4}}}$$
+	$\triangle$ Ma'lumki, $\cos{x}\le1$, u holda $x>10$ uchun $\Big|\frac{\cos{x}}{\sqrt{1+x^{2}}} \Big|<10^{-2}$ tengsizlikni hosil qilamiz. Demak,
+	$$\bigg|\int\limits_{10}^{18}\frac{\cos{x}}{\sqrt{1+x^{2}}} \bigg|<8\cdot10^{-2}<10^{-1};\ 
+	\textrm{ya'ni},\ \
+	\bigg|\int\limits_{10}^{18}\frac{\cos{x}}{\sqrt{1+x^{2}}} \bigg|<0,1.\ \blacktriangle$$
+	
+	\item Integralni baholang:
+	$$\int\limits_{0}^{\pi/2}\frac{dx}{5+3\cos^{2}{x}}$$
+	
+	$\triangle$ Ma'lumki, $0\le\cos^{2}{x}\le1$. Demak,
+	$$\frac{1}{8}\le\frac{1}{5+3\cos^{2}{x}}\le\frac{1}{5};\ \ \textrm{ya'ni} \ \ \frac{\pi}{16}\le\int\limits_{0}^{\pi/2}\frac{dx}{5+3\cos^{2}{x}}\le\frac{\pi}{10}.\ \ \blacktriangle$$
+	
+	\item Integralni hisoblang:
+	$$\int\limits_{0}^{1}xe^{-x}\,dx$$
+	$\triangle$ Bo`laklab integrallash usulidan foydalanamiz: $u=x;\ \ dv=e^{-x}dx$. U holda $du=dx$, $v=-e^{-x}$. Demak,
+	$$\int\limits_{0}^{1}xe^{-x}\,dx=-xe^{-x}\bigg|_{0}^{1}+\int\limits_{0}^{1}e^{-x}\,dx=-e^{-1}-e^{-x}\bigg|_{0}^{1}=-2e^{-1}+1=\frac{e-2}{e}.\ \blacktriangle$$
+	
+	\item Integralni hisoblang:
+	$$\int\limits_{1}^{e}\frac{\ln^{2}x}{x}\,dx$$
+	$\triangle$ Quyidagicha  belgilash kiritamiz: $\ln{x}=t$. U holda $\frac{dx}{x}=dt$; agar $x=1$ bo`lsa, $t=0;$ agar $x=e$ bo`lsa, $t=1$ bo`ladi. Demak,
+	$$\int\limits_{1}^{e}\frac{\ln^{2}x}{x}\,dx=\int\limits_{0}^{1}t^{2}\,dt=\frac{1}{t^{3}}\bigg|_{0}^{1}=\frac{1}{3}(1^{3}-0^{3})=\frac{1}{3}.\ \blacktriangle$$
+	
+	\item Integralni hisoblang:
+	$$\int\limits_{0}^{r}\sqrt{r^{2}-x^{2}}\,dx$$
+	$\triangle$ Quyidagicha  belgilash kiritamiz: $x=r\sin{t}$. U holda $dx=r\cos{t}dt;$ agar $x=0$ bo`lsa, $t=0$; agar $x=r$ bo`lsa, $t=\pi/2$ bo`ladi. Demak,
+\begin{multline*}
+	\int\limits_{0}^{r}\sqrt{r^{2}-x^{2}}\,dx=\int\limits_{0}^{\pi/2}\sqrt{r^{2}-r^{2}\sin^{2}t}r\cos{t}\,dt=r^{2}\int\limits_{0}^{\pi/2}\cos^{2}t\,dt=\\
+	=\frac{1}{2}r^{2}\int\limits_{0}^{\pi/2}(1+\cos{2t})\,dt=\frac{1}{2}r^{2}\left[t+\frac{1}{2}\sin{2t}\right]_{0}^{\pi/2}=\\
+	=\frac{r^{2}}{2}\left[\left(\frac{\pi}{2}+\frac{1}{2}\sin{\pi}\right)-\left(0+\frac{1}{2}\sin{0}\right)\right]=\frac{\pi r^{2}}{4}.\ \blacktriangle
+\end{multline*}
+
+\item 
+
+\item Integralni hisoblang:
+$$I=\int\limits_{-1}^{1}\frac{x^{2}\arcsin{x}}{\sqrt{1+x^{2}}}\,dx$$
+$\triangle$ Integral ostidagi funksiya -- toq funksiya. Demak, $I=0.\ \blacktriangle$
+
+\item $\int\limits_{0}^{1}x\,dx$ integralni integral summa limiti kabi hisoblang.
+
+\item $\int\limits_{0}^{1}e^{x}\,dx$ integralni integral summa limiti kabi hisoblang.
+
+\item Integralni baholang:
+$\int\limits_{0}^{1}x(1-x)^{2}\,dx$
+
+\item Integralni baholang:
+$\int\limits_{0}^{\pi/2}e^{x\ln^{2}{x}}\,dx$
+
+\item Integralni baholang:
+$\int\limits_{\pi/2}^{\pi}\frac{\sin{x}}{x}\,dx$
+\end{enumerate}
+Aniq integrallarni hisoblang:
+
+	\begin{enumerate}
+		\setcounter{enumi}{1551}
+	\item $\int\limits_{1}^{3}x^{3}\sqrt{x^{2}-1}\,dx$ \inlineitem $\int\limits_{0}^{1}\frac{xdx}{1+x^{4}}$\inlineitem $\int\limits_{1}^{2}\frac{e^{1/x}}{x^{2}}\,dx$
+	\item $\int\limits_{0}^{1}e^{x+e^{x}}\,dx$ \inlineitem $\int\limits_{1}^{e^{\pi/2}}\cos\ln{x}\,dx$\inlineitem$\int\limits_{0}^{\pi/6}\frac{\sin^{2}x}{\cos{x}}\,dx$
+	\item $\int\limits_{\ln{2}}^{2\ln{2}}\frac{dx}{e^{x}-1}$
+	\inlineitem $\int\limits_{0}^{2\pi}\cos{5x}\cos{x}\,dx$
+	\inlineitem $\int\limits{0}^{\pi/3}\cos^{3}{x}\sin{2x}\,dx$
+	\item $\int\limits_{0}^{\pi/4}\frac{x+\sin{x}}{1+\cos{x}}\,dx$
+	\inlineitem $\int\limits_{1}^{2}\frac{dx}{x^{2}+x}$
+	\inlineitem $\int\limits_{0}^{\pi/2}e^{x}\cos{x}\,dx$
+	\item $\int\limits_{-3}^{3}\frac{x^{2}\sin{2x}}{x^{2}+1}\,dx$\ \ \ \ 	
+	$\bullet$ Toq funksiya xossalaridan foydalaning.
+	\item $\int\limits_{-1}^{1}x\textrm{arctg}x\,dx$\ \ \ \ 	
+	$\bullet$ Juft funksiya xossalaridan foydalaning.
+	
+	\item Isbotlang:
+	$$\int\limits_{-\pi}^{\pi}\sin{mx}\sin{nx}\,dx=\begin{cases}
+		0,& m\ne n\\
+		\pi, & m=n\\
+	\end{cases}$$
+bu yerda $m$ va $n$ -- musbat butun sonlar.
+\end{enumerate}
+
+
+\section{Xosmas integrallar}
+
+\textbf{1. Asosiy tushunchalar. }Quyidagi xollarda integrallarni xosmas integrallar deb ataladi:
+
+
+1) integrallash chegarasi cheksiz bo`lgan integrallar; 
+2) chegaralanmagan funksiyalarning integrallari.
+
+
+
+
+
+
+
+
+
+\section{Yassi shakl yuzasini hisoblash}
+\hspace{0.6cm}
+$y=f(x)\ [f(x)\ge0]$ funksiya, $x=a$, $x=b$ to`g`ri chiziqlar hamda $[a;b]$ kesma bilan chegara-langan egri chiziqli trapetsiya yuzi $S$ quyidagi formula orqali hisoblanadi:
+$$S=\int\limits_1^b f(x)\,dx$$
+
+Agar trapetsiya, $f_1(x)$ va $f_2(x)$ funksiyalar ($f_1(x)\le f_2(x)$) hamda $x+a$ va $x=b$ to`g`ri chiziqlar bilan chegaralangan bo`lsa, uning yuzasi $S$:
+$$S=\int\limits_a^b\left[f_2(x)-f_1(x)\right]\,dx$$
+
+Agar egri chiziq $x=x(t)$ va $y=y(t)$ ko`rinishidagi parametrik tenglamalar bilan berilgan bo`lsa, ushbu egri chiziqli trapetsiyaning yuzasini topish uchun quyidagi formuladan foydalaniladi:
+$$S=\int\limits_{t_{1}}^{t_{2}}y(t)x^\prime(t)\,dt$$
+
+bu yerda $t_1$ va $t_2$ larning qiymatlari $a=x(t_1)$ va $b=x(t_2)$ tenglamalar orqali aniqlanadi ($t_1\le t\le t_2$ bo`lganda $y(t)\ge0$).
+
+Qutb koordinatalarida $\rho=\rho(\theta)$ tenglama hamda ikki qutb radiuslari $\theta=\alpha$ va $\theta=\beta$ ($\alpha<\beta$) bilan berilgan egri chiziqli sektor yuzasi quyidagi formula orqali topiladi:
+$$S=\frac{1}{2}\int\limits_{\alpha}^{\beta}\rho^2\,d\theta$$
+
+\begin{enumerate}\setcounter{enumi}{1591}
+	
+	\item $y=4x-x^2$ parabola hamda $Ox$ o`qi bilan chegaralangan shakl yuzasini hisoblang.
+	
+	$\triangle$ Parabola $Ox$ o`qini $O(0;0)$ va $M(4;0)$ nuqtalarda kesib o`tadi. Demak,
+	$$S=\int\limits_0^4(4x-x^2)\,dx=\left[2x^2-\frac{1}{3}x^3\right]_0^4=\frac{32}{3}(\textrm{kv.birl.})\ \blacktriangle$$
+	
+	\item $y=(x-1)^2$ parabola hamda $x^2-y^2/2=1$ giperbola bilan chegaralangan shakl yuzasini toping.
+	
+	$\triangle$ Dastlab parabola va giperbolaning kesishish nuqtasini aniqlaymiz. Buning uchun quyidagi tenglamalarni yechish lozim:
+	$$x^2-\frac{(x-1)^4}{2}=1,\ \mbox{yoki}\ x^4-4x^3+4x^2+3=0$$
+	Ikkinchi tenglamaning chap tomonini ko`paytuvchilarga ajratish mumkin: $(x-1)(x-3)(x^2+1)=0$. Bu yerdan $x_1=1$, $x_2=3$ va $y_1=0$, $y_2=4$. Shunday qilib, berilgan egri chiziqlar $A(1;0)$ va $B(3;4)$ nuqtalarda kesishar ekan (\textcolor{red}{43-rasm}). U holda:
+	\begin{multline*}
+		S=\int\limits_1^3\left[\sqrt{2(x^2-1)}-(x-1)^2\right]\,dx=\frac{\sqrt{2}}{2}\left[x\sqrt{x^2-1}+\ln\left\{ x+\sqrt{x^2-1}\right\}\right]\bigg|_{1}^{3}-\frac{1}{3}\left[(x-1)^3\right]\bigg|_{1}^{3}=\\
+		=\frac{\sqrt{2}}{2}\left[3\sqrt{8}+\ln\left(3+\sqrt{8}\right)\right]-\frac{8}{3}=\frac{10}{3}+\frac{\sqrt{2}}{2}\ln\left(3+\sqrt{8}\right)\approx4,58(\mbox{kv.birl.})\ \blacktriangle
+	\end{multline*}
+	
+	
+	\item $x=2(t-7sin t)$, $y=2(1-\cos t)$ tenglama bilan berilgan sikloidaning bir yog`i va $Ox$ o`qi bilan chegaralangan soha yuzasini hisoblang.
+	
+	$\triangle$ Bu yerda $dx=2(1-\cos t)dt$, $t$ esa $t_1=0$ dan $t_2=2\pi$ gacha o`zgaradi. U holda:
+	$$S=\int\limits_0^{2\pi}2^2(1-\cos t)^2\, dt=4\int\limits_0^{2\pi}(1-2\cos t+\cos^2 t)\, dt=4\left[t-2\sin t+\frac{1}{2}t+\frac{1}{4}\sin 2t\right]\bigg|_{0}^{2\pi}=12\pi\ (\mbox{kv.birl.})\ \blacktriangle$$
+	
+	
+	
+	\item $\rho^2=2\cos 2\theta$ lemniskata bilan chegaralangan soha yuzasini toping (\textcolor{red}{2-rasmga qarang}).
+	
+	$\triangle$ Biz hisoblamoqchi bo`lgan yuzaning to`rtdan bir qismi $\theta$ ning $0$ dan $\pi/4$ gacha o`zgarishiga mos keladi. U holda:
+	$$S=4\cdot\frac{1}{2}\int\limits_{0}^{\pi/4}2\cos 2\theta\, d\theta=2\sin 2\theta\bigg|_{0}^{\pi/4}=2 (\mbox{kv.birl.})\ \blacktriangle$$
+	
+	
+	
+\end{enumerate}
+
+
+Quyidagi chiziqlar bilan chegaralangan shakllarning yuzasini toping:
+\begin{enumerate}\setcounter{enumi}{1595}
+	\item $y=-x^2$, $x+y+2=0$
+	\item $y=16/x^2$, $y=17-x^2$ (I chorak)
+	\item $y^2=4x^3$, $y=2x^2$
+	\item $xy=20$, $x^2+y^2=41$ (I chorak)
+	\item $y=\sin x$, $y=\cos x$, $x=0$
+	\item $y=0,25x^2$, $y=3x-0,5x^2$
+	\item $xy=4\sqrt{2}$, $x^2-6x+y^2=0$, $y=0$, $x=4$
+	\item $x=12\cos t+5\sin t$. $y=5\cos t-12\sin t$
+	\item $x=a\cos^3 t$, $y=a\sin^3 t$
+	\item $\rho=4/\cos(\theta-\pi/6)$, $\theta=\pi/6$, $\theta=\pi/3$
+	\item $\rho=a\cos\theta$, $rho=2a\cos\theta$
+	\item $\rho=\sin^2(\theta/2)$ ($\theta=\pi/2$ nurdan o`ng tomonda joylashgan qismi)
+	\item $\rho=a\sin30$
+	\item $\rho=2\cos\theta$, $\rho=1$ ($\rho=1$ doiradan tashqarida joylashgan qismi)
+\end{enumerate}
+
+
+
+
+
+
+
+
+\section{Egri chiziqning yoy uzunligini hisoblash}
+Agar $y=f(x)$ egri chiziq $[a;b]$ kesmada silliq  (ya'ni $y^\prime=f^\prime(x)$ hosila uzluksiz) bo`lsa, ushbu egri chiziq yoyining uzunligi quyidagi formuladan topiladi:
+$$L=\int\limits_a^b\sqrt{1+y^{\prime2}}\,dx$$
+
+Egri chiziq tenglamasi parametrik ko`rinishda, ya'ni $x=x(t)$, $y=y(t)$ kabi berilgan bo`lsa ($x(t)$ va $y(t)$ -- uzluksiz differensiallanuvchi funksiyalar), $t$ parametrning $t_1$ dan $t_2$ gacha o`zgarishiga mos kelgan yoy uzunligi quyidagi formuladan hisoblanadi:
+$$L=\int\limits_{t_{1}}^{t_2}\sqrt{\dot x^2+\dot y^2}\,dt$$ 
+
+Agar silliq egri chiziq qutb koordinatalar sistemasida $\rho=\rho(\theta)\ (\alpha\le\le\beta)$ ko`rinishida  berilgan bo`lsa, yoy uzunligi quyidagiga teng bo`ladi;
+$$L=\int\limits_\alpha^\beta\sqrt{\rho^2+\rho^{\prime2}}\,d\theta$$
+
+\begin{enumerate}\setcounter{enumi}{1609}
+	\item $y=x^3$ egri chiziqning $x=0$ dan $x=1$ gacha bo`lgan uzunligini toping ($y\ge0$), 
+	
+	$\triangle$ Egri chiziq tenglamasini differensiallab, $y^\prime=(3/2)x^{1/2}$ ni topamiz. Shunday qilib:
+	$$L=\int\limits_{0}^{1}\sqrt{1+\frac{9}{4}}x\,dx=
+	\frac{4}{9}\cdot\frac{2}{3}\left(1+\frac{9}{4}x\right)^{3/2}\bigg|_{0}^{1}=\frac{8}{27}\left(\frac{13}{4}\right)^{3/2}-\frac{8}{27}=\frac{8}{27}\left(\frac{13}{8}\sqrt{13}-1\right).\ \blacktriangle$$
+	
+	\item $x=\cos^5 t$, $y=\sin^5 t$ parametrik tenglamalar bilan berilgan egri chiziqning $t_1=0$ dan $t_2=\pi/2$ gacha bo`lgan uzunligini toping.
+	
+	$\triangle$ $t$ parametr bo`yicha hosilalarni hisoblaymiz: $\dot{x}=-5\cos^4 t\sin t$, $\dot{y}=5\sin^4 t\cos t$. So`ngra:
+\begin{multline*}L=\frac{5}{2}\int\limits_{0}^{\pi/2}\sqrt{(-5\cos^4 t\sin t)^2+(5\sin^4 t\cos t)^2}\,dt=\frac{5}{2}\int\limits_{0}^{\pi/2}\sin t\cos t\sqrt{\sin^6 t+\cos^6 t}\,dt=\\
+	=\frac{5}{2}\int\limits_0^{\pi/2}\sin 2t\sqrt{\frac{1}{4}+\frac{3}{4}\cos^2 2t}\,dt=-\frac{5}{8}\int\limits_0^{\pi/2}\sqrt{1+3\cos^2 2t}\,d(\cos 2t)=\\
+	=-\frac{5}{8\sqrt{3}}\left[\frac{\sqrt{3}}{2}\cos 2t\sqrt{1+3\cos^2 2t}+\frac{1}{2}\ln\left[\sqrt{3}\cdot\cos 2t+\sqrt{1+3\cos^2 2t}\right]\right]_{0}^{\pi/2}=\frac{5}{8}\left[2-\frac{\ln(2-\sqrt{3})}{\sqrt{3}}\right].\ \blacktriangle
+\end{multline*}
+
+\item $\rho=\sin^3(\theta/3)$ tenglama bilan berilgan egri chiziqning $\theta_1=0$ dan $\theta_2=\pi/2$ gacha bo`lgan uzunligini toping.
+
+$\triangle$ Funksiya hosilasini hisoblaymiz: $\rho^\prime=\sin^2(\theta/3)\cos(\theta/3)$. So`ngra yoy uzunligini hisoblaymiz:
+\begin{multline*}
+	L=\int\limits_{0}^{\pi/2}\sqrt{\sin^6 \frac{\theta}{3}+\left(\sin^2 \frac{\theta}{3}\cos\frac{\theta}{3}\right)^{2}}\,d\theta=\int\limits_{0}^{\pi/2}\sin^2 \frac{\theta}{3}\,d\theta=\frac{1}{2}\int\limits_{0}^{\pi/2}\left(1-\cos\frac{2\theta}{3}\right)\,d\theta=\\
+	=\frac{1}{2}\left[\theta-\frac{3}{2}\sin\frac{2\theta}{3}\right]_{0}^{\pi/2}=\frac{1}{8}\left(2\pi-3\sqrt{3}\right).\ \blacktriangle
+\end{multline*}
+\end{enumerate}
+
+Quyidagi egri chiziqlar yoylarining uzunligini hisoblang:
+\begin{enumerate}\setcounter{enumi}{1612}
+\item $y=\ln\sin x$, $x=\pi/3$ dan $x=\pi/2$ gacha
+
+\item $y=(2/5)x\sqrt[4]{x}-(2/3)\sqrt[4]{x^3}$ funksiyaning $Ox$ o`qi bilan kesishish nuqtalari orasidagi masofani aniqlang.
+
+\item $y=x^2/2$, $x=0$ dan $x=1$ gacha.
+
+\item $y=1-\ln\cos x$, $x=0$ dan $x=\pi/6$ gacha.
+
+\item $y=\textrm{ch}\ x$, $x=0$ dan $x=1$ gacha.
+
+\item $x=t^3/3-t$, $y=t^2+2$, $t=0$ dan $t=3$ gacha.
+
+\item $x=e^t \cos t$, $y=e^t \sin t$, $t=0$ dan $t=\ln\pi$ gacha.
+
+\item $x=8\sin t+6\cos t$, $y=6\sin t-8\cos t$, $t=0$ dan $\pi/2$ gacha.
+
+\item $x=9(t-\sin t)$, $y=9(1-\cos t)$ (sikloida bir yog`ining yoy uzunligi).
+
+\item $\rho=\theta^2$, $\theta=0$ dan $\theta=\pi$ gacha.
+
+\item $\rho=a\sin\theta$
+
+\item $\rho=a\cos^3(\theta/3)$, $\theta=0$ dan $\theta=\pi/2$ gacha.
+
+\item $\rho=1-\cos\theta$
+\end{enumerate}
+
+\section{Jism hajmini hisoblash}
+
+
+
+
+
+
+
+
+
+
+
+\section{Aylanma jismlar sirt yuzasini hisoblash}
+$y=f(x)\ (a\le x\le b)$ egri chiziqning yoyi $Ox$ o`qi atrofida aylansa, aylanish sirtining yuzasi quyidagi formuladan topiladi:
+$$S_{x}=2\pi\int\limits_a^b y\sqrt{1+y^{\prime 2}}\,dx$$
+
+Agar egri chiziq $x=x(t)$ va $y=y(t)\ (t_1\le t\le t_2)$ parametrik tenglamalar bilan berilgan bo`lsa:
+
+$$S_{x}=2\pi\int\limits_{t_{1}}^{t_{2}}y\sqrt{\dot{x}^{2}+\dot{y}^{2}}\,dt$$
+\begin{enumerate} \setcounter{enumi}{1634}
+	
+	\item $y=\sin 2x$ tenglama bilan berilgan sinusoida yoyini $Ox$ o`qi atrofida aylantirishdan hosil bo`lgan shaklning sirt yuzasini toping ($x=0$ dan $x=\pi/2$ gacha o`zgaradi).
+	
+	$\triangle$ Hosilani hisoblaymiz: $y^\prime=2\cos 2x$. U holda
+	
+	$$S_{x}=2\pi\int\limits_{0}^{\pi/2}\sin 2x\sqrt{1+4\cos^2 2x}\, dx$$
+	
+	O`zgaruvchilarni almashtirish usulini qo`llaymiz: $2\cos 2x=t$, $-4\sin 2x dx=dt$, $\sin 2x dx=(-1/4)dt$. $t$ bo`yicha integrallash chegaralarini aniqlaymiz: agar $x=0$ bo`lsa, $t=2$; agar $x=\pi/2$ bo`lsa, $t=-2$. Shunday qilib:
+	\begin{multline*}
+	S=2\pi\int\limits_{2}^{-2}\sqrt{1+t^{2}}\left(-\frac{1}{4}\right)\, dt=\frac{\pi}{2}\int\limits_{-2}^{2}\sqrt{1+t^2}\,dt=\frac{\pi}{2}\left[\frac{t}{2}\sqrt{1+t^2}+\frac{1}{2}\ln\left\{t+\sqrt{1+t^2}\right\}\right]\bigg|_{-2}^{2}=\\
+	=\frac{\pi}{2}\left(2\sqrt{5}+\frac{1}{2}\ln\frac{\sqrt{5}+2}{\sqrt{5}-2}\right)=\frac{\pi}{2}\left[2\sqrt{5}+\ln\left\{\sqrt{5}+2\right\}\right]\ (\textrm{kv.birl.})\ \blacktriangle
+\end{multline*} 
+\end{enumerate}
+
+Quyidagi egri chiziqlarning $Ox$ o`qi atrofida aylanishidan hosil bo`lgan sirt yuzasini hisoblang:
+\begin{enumerate}\setcounter{enumi}{1635}
+	
+	\item $y=2\textrm{ch}(x/2)$, $x=0$ dan $x=2$ gacha
+	\item $y=x^3$, $x=0$ dan $x=1/2$ gacha
+	\item $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+	\item $x=t-\sin t$, $y=1-\cos t$ (bitta yog`ining aylanishidan hosil bo`lgan sirt yuzasini hisoblang)
+	
+	
+\end{enumerate}
+
+
+\section{Statik momentlar va yassi jismlar inersiya momentlari}
+\section{Og`irlik markazining koordinatalarini topish. Gulden teoremasi}
+\section{Ish va bosimni hisoblash}
+\section{Giperbolik funksiyalar haqida tushuncha}
