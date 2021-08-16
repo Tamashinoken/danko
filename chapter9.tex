@@ -144,6 +144,262 @@ XV. $\int \frac{dx}{\textrm{sh}^{2}x}=-\textrm{cth}x+C$
 
 
 \section{Ratsional kasrlarni integrallash}
+\textbf{1.} $P(x)/Q(x)$ ko`rinishidagi kasrlarni ratsional kasrlar deb ataladi. Bu yerda $P(x)$ va $Q(x)$ -- ko`phadlar. Agar $P(x)$ ko`phadning darajasi $Q(x)$ ko`phad darajasidan kichik bo`lsa, ratsional kasrni \textit{to`g`ri ratsional kasr}  deb yuritiladi. Aks holda \textit{noto`gri ratsional kasr} deb ataladi.
 
-\section{Eng sodda irratsional funksiyalarni integrallash}
-\textbf{1.} $\int \textbf{R}(\textbf{x}, (\textbf{\textbf{ax}}+\textbf{b})^{\textbf{m}_{1}/\textbf{n}_{1}}, (\textbf{ax}+\textbf{b})^{\textbf{m}_{2}/\textbf{n}_{2}}, \ldots)\,\textbf{dx}$ \textbf{ko`rinishidagi integrallar}, bu yerda $R$--ratsional funksiya, $m_1$, $n_1$, $m_2$, $n_2$,$\ldots$ -- butun sonlar. 
+Quyidagi ko`rinishdagi kasrlarni sodda (elementar) kasrlar deyiladi:
+
+\begin{enumerate}[label=\Roman*]
+	\item $\frac{A}{x-a}$;
+	\item $\frac{A}{(x-a)m}$, bu yerda $m$ - birdan katta bo`lgan butun son;
+	\item $\frac{Ax+B}{x^2+px+q}$, bu yerda $\frac{p^2}{4}-q<0$, ya'ni kvadrat uchhad haqiqiy ildizlarga ega emas;
+	\item $\frac{Ax+B}{(x^2+px+q)^n}$, bu yerda $n$ - birdan katta bo`lgan butun son hamda $x^2+px+q$ kvadrat uchhad haqiqiy ildizlarga ega emas.	
+\end{enumerate}
+
+
+
+Yuqoridagi to`rttala holda ham $A,\ B,\ p,\ q,\ a$ larni haqiqiy son deb hisoblaymiz. Hamda keltirilgan kasrlarni mos holda I, II, III, IV tipdagi ratsional kasrlar deb ataymiz.
+
+Dastlabki uchta tipdagi kasrlarning integralini ko`rib chiqamiz:
+
+\begin{enumerate}[label=\Roman*]
+	\item $\int\frac{A}{x-a}\,dx=A\ln|x-a|+C$
+	\item $\int\frac{A}{(x-a)^m}\,dx=-\frac{A}{m-1}\cdot\frac{1}{(x-a)^{m-\lambda}}+C$
+	\item $\int\frac{dx}{x^2+px+q}=\frac{2}{\sqrt{4q-p^2}}\mbox{arctg}\frac{2x+p}{\sqrt{4q-p^2}}+C$
+\end{enumerate}
+
+Haqiqatdan ham, III tip kasr uchun quyidagini hosil qilish mumkin:
+$$x^2+px+q=\left(x+\frac{p}{2}\right)^2+q-\frac{p^2}{4},\ \mbox{yoki}\ x^2+px+q=t^2+a^2$$
+
+bu yerda $t=x+\frac{p}{2},\ a=\frac{\sqrt{4q-p^2}}{2}\ \left(\mbox{bu yerda}\ \frac{p^2}{4}-q<0\right)$,  demak
+$$\int\frac{dx}{x^2+px+q}=\int\frac{dt}{t^2+a^2}=\frac{1}{a}\mbox{arctg}\frac{t}{a}+C=\frac{2}{\sqrt{4q-p^2}}\mbox{arctg}\frac{2x+p}{\sqrt{4q-p^2}}+C$$
+
+\begin{enumerate}\setcounter{enumi}{1402}
+	\item Integralni hisoblang: $\int\frac{dx}{x^2+6x+25}$
+	
+	$$\triangle\ \int\frac{dx}{x^2+6x+25}=\int\frac{dx}{(x+3)^2+16}=\int\frac{d(x+3)}{(x+3)^2+16}=\frac{1}{4}\mbox{arctg}\frac{x+3}{4}+C.\ \blacktriangle
+	$$
+	
+	\item Integralni hisoblang: $\int\frac{dx}{2x^2-2x+3}$
+	
+	\begin{multline*}\triangle\ \int\frac{dx}{2x^2-2x+3}=\frac{1}{2}\int\frac{dx}{x^2-x+\frac{3}{2}}=\frac{1}{2}\int\frac{dx}{\left(x-\frac{1}{2}\right)^2+\left(\frac{3}{2}-\frac{1}{4}\right)} = \frac{1}{2}\int\frac{d\left(x-\frac{1}{2}\right)}{\left(x-\frac{1}{2}\right)^2+\left(\frac{\sqrt{5}}{2}\right)^2} =\\
+		= \frac{1}{2}\cdot\frac{2}{\sqrt{5}}\cdot\mbox{arctg}\frac{x-\frac{1}{2}}{\sqrt{5}/2}+C=\frac{1}{\sqrt{5}}\cdot\mbox{arctg}\frac{2x-1}{\sqrt{5}}+C.\ \blacktriangle
+\end{multline*}
+\end{enumerate}
+Endi esa III tipli kasrlar umumiy holda qanday integrallanishini ko`rib chiqamiz.
+
+$\int\frac{Ax+B}{x^2+px+q}\,dx,\ \frac{p^2}{4}-q<0$ ko`rinishidagi integralni hisoblash kerak bo`lsin. U holda kasrning suratini maxrajning hosilalari ko`rinishidagi elementar kasrlarga ajratamiz. Buning uchun suratni quyidagicha yozib olamiz:
+$$Ax+B=(2x+p)\cdot\frac{A}{2}-\frac{Ap}{2}+B.$$U holda
+$$\int\frac{Ax+B}{x^2+px+q}\,dx=\frac{A}{2}\int\frac{2x+p}{x^2+px+q}\,dx+\left(B-\frac{Ap}{2}\right)\int\frac{dx}{x^2+px+q}$$
+Bu yerdagi birinchi integralda kasrning surati maxrajning hosilasidir. Shu sababli, 
+$$\int\frac{2x+p}{x^2+px+q}\,dx=\ln(x^2+px+q)+C,$$
+chunki $x$ ning har qanday qiymati uchun $x^2+px+q>0$. Ikkinchi integral esa, quyidagi formula orqali osongina hisoblanadi:
+$$\int\frac{dx}{x^2+px+q}=\frac{2}{\sqrt{4q-p^2}}\mbox{arctg}\frac{2x+p}{\sqrt{4q-p^2}}+C.$$
+Shunday qilib, 
+$$\int\frac{Ax+B}{x^2+px+q}\,dx=\frac{A}{2}\ln(x^2+px+q)+\frac{2B-Ap}{\sqrt{4q-p^2}}\mbox{arctg}\frac{2x+p}{\sqrt{4q-p^2}}+C.$$
+
+\begin{enumerate}\setcounter{enumi}{1404}
+	
+	\item Integralni hisoblang: $\int\frac{3x-1}{x^2-4x+8}\,dx$
+	\begin{multline*}
+		\triangle\ \int\frac{3x-1}{x^2-4x+8}\,dx=\int\frac{\frac{3}{2}(2x-4)-1+6}{x^2-4x+8}\,dx=\frac{3}{2}\int\frac{2x-4}{x^2-4x+8}\,dx+5\int\frac{dx}{x^2-4x+8}=\\
+		=\frac{3}{2}\ln(x^2-4x+8)
+		+5\int\frac{dx}{(x-2)^2+2^2}=\frac{3}{2}\ln(x^2-4x+8)+\frac{5}{2}\mbox{arctg}\frac{x-2}{2}+C.\ \blacktriangle
+	\end{multline*}
+	
+	\item Integralni hisoblang: $\int\frac{xdx}{2x^2+2x+5}$
+	\begin{multline*}
+		\triangle\ \int\frac{xdx}{2x^2+2x+5}=\int\frac{\frac{1}{4}(4x+2)-\frac{1}{2}}{2x^2+2x+5}\,dx=\frac{1}{4}\int\frac{4x+2}{2x^2+2x+5}\,dx-\frac{1}{2}\int\frac{dx}{2x^2+2x+5}=\\
+		=\frac{1}{4}\ln(2x^2+2x+5)-\frac{1}{2}\cdot\frac{1}{2}\int\frac{dx}{x^2+x+\frac{5}{2}}=\frac{1}{4}\ln(2x^2+2x+5)-\frac{1}{4}\int\frac{d\left(x+\frac{1}{2}\right)}{\left(x+\frac{1}{2}\right)^2+
+			\left(\frac{3}{2}\right)^2 } =\\
+		=\frac{1}{4}\ln(2x^2+2x+5)-\frac{1}{4}\cdot\frac{1}{3/2}\cdot\mbox{arctg}\frac{x+1/2}{3/2}+C=\frac{1}{4}\ln(2x^2+2x+5)-\frac{1}{6}\mbox{arctg}\frac{2x+1}{3}+C.\ \blacktriangle		
+	\end{multline*}
+\item Integralni hisoblang: $\int\frac{2x^3+3x}{x^4+x^2+1}\,dx$
+
+$\triangle$ Ushbu integralni hisoblash uchun $x^2=t$ ko`rinishidagi yangi o`zgaruvchi kiritamiz, u holda $2xdx=dt,\ xdx=(1/2)dt$ bo`ladi. 
+\begin{multline*}
+	\int\frac{(2x^2+3)xdx}{x^4+x^2+1}\,dx=\frac{1}{2}\int\frac{(2t+3)dt}{t^2+t+1}=\frac{1}{2}\int\frac{(2t+1)+2}{t^2+t+1}\,dt=\frac{1}{2}\int\frac{2t+1}{t^2+t+1}\,dt+\int\frac{dt}{t^2+t+1}=\\
+	=\frac{1}{2}\ln(t^2+t+1)+\int\frac{d\left(t+\frac{1}{2}\right)}
+	{\left( t+\frac{1}{2}\right)^2+\left( \frac{\sqrt{3}}{2}\right)^2}=\frac{1}{2}\ln(t^2+t+1)+\frac{2}{\sqrt{3}}\mbox{arctg}\frac{t+1/2}{\sqrt{3}/2}+C=\\
+	=\frac{1}{2}\ln(t^2+t+1)+\frac{2}{\sqrt{3}}\mbox{arctg}\frac{2x^2+1}{\sqrt{3}}+C.\ \blacktriangle
+\end{multline*}
+\end{enumerate}
+\section{Sodda ko`rinishdagi irratsional kasrlarni integrallash}
+
+
+Integrallarni hisoblang:
+\begin{enumerate}\setcounter{enumi}{1465}
+	\item $\int\frac{dx}{x\left(\sqrt[3]{x}+1\right)^2}$
+	\inlineitem $\int\frac{\sqrt{x}}{\sqrt{\sqrt{x}}}\,dx$
+	
+	\item $\int\frac{dx}{\sqrt[3]{1+x^3}}$
+	\inlineitem $\int\frac{dx}{x\sqrt{1+x^3}}$
+	
+	\item $\int\sqrt[3]{x}\sqrt{5x\sqrt[3]{x}+3}\,dx$
+	\inlineitem $\int\frac{dx}{x^3\sqrt[3]{2-x^3}}$
+	
+\end{enumerate}
+\section{Trigonometrik funksiyalarni integrallash}
+\hspace{0.6cm}
+
+
+\begin{enumerate}\setcounter{enumi}{1471}
+	\item Integralni hisoblang: $\int\frac{dx}{4\sin x+3\cos x+5}$
+	
+	$\triangle$ Integral ostidagi funksiya $\sin x$ va $\cos x$ ga bog`liq. Quyidagicha belgilash kiritamiz: $\textrm{tg} (x/2)=t$, u holda $\sin x=\frac{2t}{1+t^2}$, $\cos x=\frac{1-t^2}{1+t^2}$, $dx=\frac{2dt}{1+t^2}$ bo`ladi, hamda:
+	$$\int\frac{dx}{4\sin x+3\cos x+5}=\int\frac{\frac{2dt}{1+t^2}}{4\cdot\frac{2t}{1+t^2}+3\cdot\frac{1-t^2}{1+t^2}+5}=2\int\frac{dt}{2t^2+8t+8}=\int\frac{dt}{(t+2)^2}=-\frac{1}{t+2}+C.$$
+	$t$ ning o`rniga avvalgi qiymatlarni qo`ysak, quyidagini hosil qilamiz:
+	$$\int{dx}{4\sin x+3\cos x+5}=-\frac{1}{\textrm{tg}(x/2)+2}+C.\ \blacktriangle$$
+	
+	\item Integralni hisoblang: $\int\frac{dx}{(a^2+b^2)-(a^2-b^2)\cos x}$
+	
+	$\triangle$ $t=\textrm{tg}(x/2)$ belgilash kiritamiz:
+\begin{multline*}
+		\int\frac{dx}{(a^2+b^2)-(a^2-b^2)\cos x}=\int\frac{\frac{2dt}{1+t^2}}{(a^2+b^2)-(a^2-b^2)\cdot\frac{1-t^2}{1+t^2}}=\\=2\int\frac{dt}{(a^2+b^2)(1+t^2)-(a^2-b^2)(1-t^2)}=\int\frac{dt}{a^2t^2+b^2}=\\
+		=\frac{1}{a}\int\frac{d(at)}{(at)^2+b^2}=\frac{1}{ab}\textrm{arctg}\frac{at}{b}+C=\frac{1}{ab}\textrm{arctg}\left(\frac{a}{b}\cdot\textrm{tg}\frac{x}{2}\right).\ \blacktriangle
+\end{multline*}
+
+Ko`pincha xususiy hollarda $\int R(\sin x, \cos x)\,dx$ ko`rinishidagi integrallar sodda ko`rinishga keltirilishi mumkin. Masalan:
+\begin{itemize}
+	\item Agar $R(\sin x, \cos x)$ -- $\sin x$ ga nisbatan toq funksiya bo`lsa, ya'ni $R(-\sin x, \cos x)=-R(\sin x, \cos x)$ bo`lsa, $\cos x=t$ belgilash kiritiladi.
+	\item Agar $R(\sin x, \cos x)$ -- $\cos x$ ga nisbatan toq funksiya bo`lsa, ya'ni $R(\sin x, -\cos x)=-R(\sin x, \cos x)$ bo`lsa, $\sin x=t$ belgilash kiritiladi.
+	\item Agar $R(\sin x, \cos x)$ -- $\sin x$ va $\cos x$ ga nisbatan juft  funksiya bo`lsa, ya'ni $R(-\sin x, -\cos x)=R(\sin x, \cos x)$ bo`lsa, $\textrm{tg} x=t$ belgilash kiritiladi.
+\end{itemize}
+
+\item Integralni hisoblang: $\int\frac{(\sin x+\sin^3 x)\,dx}{\cos 2x}$
+
+$\triangle$ Integral ostidagi ifoda sinusga nisbatan toq bo`lgani uchun $\cos x=t$ belgilash kiritamiz. U holda $\sin^2 x=1-t^2$, $\cos 2x=2\cos^2 x-1=2t^2-1$, $dt=-\sin xdx$
+\begin{multline*}
+	\int\frac{(\sin x+\sin^3 x)\,dx}{\cos 2x}=\int\frac{(2-t^2)(-dt)}{2t^2-1}=\int\frac{(t^2-2)dt}{2t^2-1}=\frac{1}{2}\int\frac{2t^2-4}{2t^2-1}\,dt=\\
+	=\frac{1}{2}\int dt-\frac{3}{2}\int\frac{dt}{2t^2-1}=\frac{t}{2}-\frac{3}{2\sqrt{2}}\int\frac{d(t\sqrt{2})}{2t^2-1}=\\
+	=\frac{t}{2}-\frac{3}{2\sqrt{2}}\ln\left[ \frac{\sqrt{2}\cos x-1}{\sqrt{2}\cos x+1}\right]+C.
+\end{multline*}
+Demak,
+$$\int\frac{(\sin x+\sin^3 x)dx}{\cos^2 x}=\frac{1}{2}\cos x-\frac{3}{2\sqrt{2}}\ln\left[ \frac{\sqrt{2}\cos x-1}{\sqrt{2}\cos x+1}\right].\ \blacktriangle$$
+
+
+\item Integralni hisoblang: $\int\frac{(\cos^3 x+\cos^5 x)dx}{\sin^2 x+\sin^4 x}$
+
+$\triangle$ 
+\end{enumerate}
+
+Integrallarni hisoblang:
+\begin{enumerate}\setcounter{enumi}{1488}
+	\item $\int\frac{dx}{3+5\sin x+3\cos x}$
+	\inlineitem $\int\frac{dx}{1-\sin x}$
+	
+	\item $\int\frac{\cos^2x\,dx}{\sin^2x+4\sin x\cos x}$
+	\inlineitem $\int\frac{\cos^3x\,dx}{\sin^2x+\sin x}$
+\end{enumerate}
+$\bullet$ $\textrm{ctg}x=t$ belgilash kiritgan holda yeching:
+\begin{enumerate}\setcounter{enumi}{1492}
+	\item $\int\frac{\sin 2x\,dx}{\cos^3x-\sin^2x-1}$
+	\inlineitem $\int\sin^3x\,dx$
+	\inlineitem $\int\frac{\cos^5x\,dx}{\sin x}$
+	
+	\item $\int\sin^2(x/4)\cos^2(x/4)\,dx$
+	\inlineitem $\int\cos^4x\,dx$
+	
+	\item $\int\textrm{tg}^4(x/2)\,dx$
+	\inlineitem $\int\textrm{ctg}^33x\,dx$
+	
+	\item $\int\sec^6x\,dx$
+	\inlineitem $\int\frac{\cos^2x}{\sin^4x}\,dx$
+	
+	\item $\int\sec^3x\,dx$
+	\inlineitem $\int\textrm{ctg}^2x\textrm{cosec}x\,dx$
+	
+	\item $\int\sin 3x\sin x\,dx$
+	\inlineitem $\int\cos(x/2)\cos(x/3)\,dx$	
+\end{enumerate}
+
+$\int R(x, \sqrt{a^2-x^2})\,dx$, $\int R(x, \sqrt{a^2+x^2})\,dx$, $\int R(x, \sqrt{x^2-a^2})\,dx$ ko`rinishidagi integrallar  uchun mos holda $x=a\sin t$ (yoki $x=a\cos t$), $x=a\textrm{tg}t$ (yoki $x=a\textrm{ctg}t$) va $x=a\sec t$ (yoki $x=a\textrm{cosec}t$) belgilashlar kiritiladi.
+
+\begin{enumerate}\setcounter{enumi}{1505}
+	\item Integralni hisoblang: $I=\int\frac{\sqrt{a^2-x^2}}{x}\,dx$
+	
+	$\triangle\ x=a\sin t$ belgilash kiritamiz. U holda $dx=a\cos tdt$ bo`ladi. 
+	\begin{multline*}
+		I=\int\frac{\sqrt{a^2-a^2\sin^2t}}{a\ \sin t}a\cos t\,dt=a\int\frac{\cos^2t}{\sin t}\,dt=a\int\frac{1-\sin^2t}{\sin t}\,dt=\\
+		=a\int\frac{dt}{\sin t}-a\int\sin t\,dt=a\ln|\textrm{cosec}\ t-\textrm{ctg}\ t|+a\cos t+C.
+	\end{multline*}
+	$\int\frac{dt}{\sin t}$ integralni hisoblash uchun $\int\frac{dt}{\sin t}=\ln|\textrm{cosec}\ t-\textrm{ctg}\ t|+C$ formuladan foydalandik. Uning yordamida eski o`zgaruvchilarga o`tish ham ancha qulay amalga oshiriladi. Shunday qilib,
+	$$I=a\ln\bigg|\frac{1}{\sin t}-\frac{\cos t}{\sin t}\bigg|+a\cos t+C$$
+	bu yerda $t=x/a$, $\cos t=\sqrt{a^2-x^2}/a$. U holda
+	$$I=a\ln\bigg|\frac{a-\sqrt{a^2-x^2}}{x}\bigg|+\sqrt{a^2-x^2}+C.\ \blacktriangle$$
+	
+	\item Integralni hisoblang: $I=\int\frac{dx}{x\sqrt{a^2+x^2}}$
+	
+	$\triangle\  x=a\ \textrm{tg}\ t$ belgilash kiritamiz. U holda $dx=a\sec^2tdt$
+	
+	$$I=\int\frac{a\sec^{2}t\,dt}{a\ \textrm{tg}\ t\sqrt{a^2+a^2\textrm{tg}}\ t}=
+		\frac{1}{a}\int\frac{\sec^2t\,dt}{\textrm{tg}\ t\sec t}=
+		\frac{1}{a}\int\frac{\sec t}{\textrm{tg}\ t}\,dt=
+		\frac{1}{a}\int\frac{dt}{\sin t}=
+		\frac{1}{a}\ln|\textrm{cosec}\ t-\textrm{ctg}\ t|+C$$
+		
+	bu yerda $\textrm{tg}\ t=x/a$, $\textrm{ctg}\ t=a/x$, $\textrm{cosec}\ t=\sqrt{1+\textrm{ctg}^2t}=\sqrt{a^2+x^2}/x$.
+	Demak,
+	$$I=\frac{1}{a}\ln\bigg|\frac{\sqrt{a^2+x^2}-a}{x}\bigg|+C.\ \blacktriangle$$
+	
+	
+	\item Integralni hisoblang: $I=\int\frac{x^2\,dx}{\sqrt{x^2-a^2}}$.
+	
+	$\triangle$ $x=a\sec t$ belgilash kiritamiz. U holda $dx=a\sec t\textrm{tg}tdt$ bo`ladi:
+	$$I=\int\frac{a^2\sec^2t\cdot a\sec t\textrm{tg}t}{\sqrt{a^2\sec^2t-a^2}}\,dt=a^2\int\sec^3t\,dt$$
+	So`ngra esa \textcolor{red}{5-punktdagi} rekurrent formulani $n=1$ uchun qo`llaymiz:
+	$$\int\sec^3t\,dt=\frac{1}{2}\frac{\sin t}{\cos^2t}+\frac{1}{2}\int\sec t\,dt=\frac{\sin t}{2\cos^2t}+\frac{1}{2}\int\frac{dt}{\cos t}=\frac{\sin t}{2\cos^2t}+\frac{1}{2}\ln|\sec t+\textrm{tg}\ t|+C$$
+	bu yerda $\sec t=x/a$, $\cos t=a/x$, $\sin t=\sqrt{x^2-a^2}/x$, $\textrm{tg}\ t=\sqrt{x^2-a^2}/a$. Demak
+	$$I=\frac{a^2\sin t}{2\cos^2t}+\frac{a^2}{2}\ln|\sec t+\textrm{tg}\ t|+C=\frac{x}{2}\sqrt{x^2-a^2}+\frac{a^2}{2}\ln\bigg|\frac{x+\sqrt{x^2-a^2}}{a}\bigg|+C.\ \blacktriangle$$
+\end{enumerate}
+
+
+
+Integrallarni hisoblang:
+\begin{enumerate}\setcounter{enumi}{1508}
+	\item $\int\frac{dx}{(1-x^2)^{3/2}}$
+	\inlineitem $\int\frac{dx}{(a^2+x^2)^{3/2}}$
+	\inlineitem $\int\frac{dx}{x^3\sqrt{x^2-1}}$.
+\end{enumerate}
+
+\section{Turli funksiyalarni integrallash}
+Integrallarni hisoblang:
+\begin{enumerate}\setcounter{enumi}{1511}
+	\item $\int\sin^2x\sin 3x\,dx$
+	\inlineitem $\int(2x^2-2x+1)e^{-x/2}\,dx$
+	
+	\item $\int\frac{\ln x}{x^3}\,dx$
+	\inlineitem $\int \frac{x^2-2}{x+1}\textrm{arctg}x\,dx$
+	
+	\item $\int(2x^2-1)\cos 2x\,dx$
+	\inlineitem $\int x\ln^2 x\,dx$
+	
+	\item $\int\frac{2e^{2x}-e^x-3}{e^{2x}-2e^{2x}-3}\,dx$
+	\inlineitem $\int\textrm{arctg}\sqrt{x}\,dx$
+	
+	\item $\int\sqrt{2^x-1}\,dx$
+	\inlineitem $\int\frac{dx}{\sqrt[4]{1+x^4}}$
+	
+	\item $\int\sqrt{6+4x-2x^2}\,dx$
+	\inlineitem $\int e^{2x}\sin e^{x}\,dx$
+	
+	\item $\int\frac{dx}{\cos^2x\sqrt{2+5\textrm{tg}^2x}}$
+	\inlineitem $\int\sin 2x\ln\cos x\,dx$
+	
+	\item $\int(x+2)\cos(x^2+4x+1)\,dx$
+	\inlineitem $\int\frac{x\cos x\,dx}{\sin^3x}$
+	
+	\item $\int\frac{xe^x}{\sqrt{1+e^x}}\,dx$
+	\inlineitem $\int\ln(x^2+x)\,dx$
+	
+	\item $\int\frac{dx}{x^4+x^2}$
+	\inlineitem $\int\cos\ln x\,dx$
+	
+	\item $\int\frac{1+\sqrt[6]{x}}{(\sqrt[3]{x}-\sqrt[4]{x})\sqrt[4]{x^3}}\,dx$
+	\inlineitem $\int e^{\alpha x}\sin\beta x\,dx$
+	
+	\item $\int e^{\alpha x}\cos\beta x\,dx$
+	\inlineitem $\int\frac{dx}{a^2\cos^2x+b^2\sin^2x}$
+	
+	\item $\int\frac{dx}{\sin^2x\cos^2x}$
+	\inlineitem $\int\frac{dx}{(1+x^2)^2}$.	
+\end{enumerate}
