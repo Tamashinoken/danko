@@ -894,7 +894,188 @@ $z^\prime=b_{31}x^{\prime\prime}+b_{32}y^{\prime\prime}+b_{33}z^{\prime\prime}$
 
 \section{2-tartibli egri chiziq va sirtlarning umumiy tenglamalarini kanonik ko`rinishga keltirish}
 \section{Matritsa rangi. Ekvivalent matritsalar}
+
+
+\begin{enumerate}
+	\setcounter{enumi}{427}
+	
+	\item Matritsa rangini aniqlang: $\begin{pmatrix}
+		1&2&3&4\\2&4&6&8\\3&6&9&12
+	\end{pmatrix}$
+	
+	$\triangle$ Ushbu matritsaning barcha ikkinchi va uchinchi tartibli minorlari nolga teng, chunki ushbu minorlarning satr elementlari o`zaro ekvivalent. Birinchi tartibli minorlar (matritsa elementlari) noldan farqli. Demak matritsa rangi 1 ga teng. $\blacktriangle$
+	
+	\item Matritsa rangini aniqlang: $\begin{pmatrix}
+		1&0&0&0&5\\0&0&0&0&0\\2&0&0&0&11\\
+	\end{pmatrix}$
+
+$\triangle$ Ushbu matritsaning 2-satrini o`chirib tashlaymiz. Keyin esa 2, 3 va 4-ustunlarni ham o`chirib tashlaymiz. Natijada $\begin{pmatrix} 1&5\\2&11\end{pmatrix}$ ko`rinishidagi matritsa hosil bo`ladi. Ushbu matritsa masala shartida berilgan matritsa bilan ekvivalent. $\begin{vmatrix}
+	1&5\\2&11
+\end{vmatrix}=1\ne0$ bo`lgani uchun, berilgan matritsaning rangi 2 ga teng. $\blacktriangle$
+
+\item Matritsa rangini aniqlang: $A=\begin{pmatrix}
+	3&5&7\\1&2&3\\1&3&5
+\end{pmatrix}$.
+
+$\triangle$ 1- va 3-satr elementlarini qo`shamiz, so`ng 1-satrning 4-elementiga bo`lamiz:
+$$A=\begin{pmatrix}
+	3&5&7\\1&2&3\\1&3&5
+\end{pmatrix}\sim\begin{pmatrix}
+4&8&12\\1&2&3\\1&3&5
+\end{pmatrix}\sim\begin{pmatrix}
+1&2&3\\1&2&3\\1&3&5
+\end{pmatrix}
+$$
+
+1-satr elementlaridan 2-satr elementlarini ayiramiz va 1-satrni o`chirib tashlaymiz:
+$$\begin{pmatrix}
+	1&2&3\\1&2&3\\1&3&5
+\end{pmatrix}\sim\begin{pmatrix}
+0&0&0\\1&2&3\\1&3&5
+\end{pmatrix}\sim\begin{pmatrix}
+1&2&3\\1&3&5
+\end{pmatrix}$$
+$\begin{vmatrix}
+	1&2\\1&3
+\end{vmatrix}\ne0$ bo`lgani uchun  matritsaning rangi 2 ga teng. $\blacktriangle$
+
+\item Matritsa rangini aniqlang: $A=\begin{pmatrix}
+	4&3&2&2\\0&2&1&1\\0&0&3&3
+\end{pmatrix}$.
+
+$\triangle$ 4-ustun elementlaridan 3-ustun elementlarini ayiramiz va 4-ustunni o`chirib tashlaymiz:
+$$A=\begin{pmatrix}
+	4&3&2&2\\0&2&1&1\\0&0&3&3
+\end{pmatrix}\sim\begin{pmatrix}
+4&3&2&0\\0&2&1&0\\0&0&3&0
+\end{pmatrix}\sim\begin{pmatrix}
+4&3&2\\0&2&1\\0&0&3
+\end{pmatrix}$$
+ $\begin{vmatrix}
+	4&3&2\\0&2&1\\0&0&3
+\end{vmatrix}=24\ne0$. Demak matritsa rangi 3 ga teng. $\blacktriangle$
+
+\item Matritsa rangini  va bazis minorlarini aniqlang:
+$A=\begin{pmatrix}
+	1&0&2&0&0\\0&1&0&2&0\\2&0&4&0&
+\end{pmatrix}$
+
+\begin{multline*}\triangle\ \begin{pmatrix}
+	1&0&2&0&0\\0&1&0&2&0\\2&0&4&0&
+\end{pmatrix}\sim\begin{pmatrix}
+1&0&2&0\\0&1&0&2\\2&0&4&0
+\end{pmatrix}\sim\begin{pmatrix}
+1&0&2&0\\0&1&0&2\\1&0&2&0
+\end{pmatrix}\sim\begin{pmatrix}
+1&0&2&0\\0&1&0&2\\0&0&0&0
+\end{pmatrix}\sim\\
+\sim\begin{pmatrix}
+1&0&2&0\\0&1&0&2
+\end{pmatrix};\ r(A)=2.
+\end{multline*} 
+Matritsaning noldan farqli bo`lgan ikkinchi tartibli minorlariga bazis minorlar deyiladi:
+$$\begin{vmatrix}
+	1&0\\0&1
+\end{vmatrix},\ \ \begin{vmatrix}
+1&0\\0&2
+\end{vmatrix},\ \ \begin{vmatrix}
+0&2\\1&0
+\end{vmatrix},\ \ \begin{vmatrix}
+2&0\\0&2
+\end{vmatrix},\ \ \begin{vmatrix}
+0&1\\2&0
+\end{vmatrix},\ \ \begin{vmatrix}
+0&2\\2&0
+\end{vmatrix},\ \ \begin{vmatrix}
+1&0\\0&4
+\end{vmatrix},\ \ \begin{vmatrix}
+0&2\\4&0
+\end{vmatrix}
+$$
+Shunday qilib $A$ matritsa 8 ta bazis minorlarga ega ekan. $\blacktriangle$
+
+\item $A$ matritsada nechta ikkinchi tartibli minor mavjudligini aniqlang:
+$A=\begin{pmatrix}
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}
+\end{pmatrix}$.
+
+$\triangle$ Matritsada $C_3^2\cdot C_3^2=3\cdot3=9$ ta ikkinchi tartibli minor mavjud:
+$$\begin{vmatrix}
+	a_{22}&a_{23}\\
+	a_{32}&a_{33}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{21}&a_{23}\\
+a_{31}&a_{33}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{21}&a_{22}\\
+a_{31}&a_{32}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{12}&a_{13}\\
+a_{32}&a_{33}
+\end{vmatrix},$$
+$$\begin{vmatrix}
+	a_{11}&a_{13}\\
+	a_{31}&a_{33}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{11}&a_{12}\\
+a_{21}&a_{32}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{12}&a_{13}\\
+a_{22}&a_{23}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{11}&a_{13}\\
+a_{21}&a_{23}
+\end{vmatrix},\ \ \begin{vmatrix}
+a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{vmatrix}.\ \blacktriangle$$
+
+\item Matritsa rangini aniqlang: $A=\begin{pmatrix}
+	\lambda&5\lambda&-\lambda\\
+	2\lambda&\lambda&10\lambda\\
+	-\lambda&-2\lambda&-3\lambda
+\end{pmatrix}$
+
+\item Matritsa rangini aniqlang: $A=\begin{pmatrix}
+	1&2&3&6\\2&3&1&6\\3&1&2&6
+	\end{pmatrix}$
+
+\item Matritsa rangini va bazis minorlarini aniqlang: $A=\begin{pmatrix}
+	0&2&0&0\\1&0&0&4\\0&0&3&0
+\end{pmatrix}$
+
+\item Matritsa rangini va bazis minorlarini aniqlang: $A=\begin{pmatrix}
+	1&2&1&3&4\\3&4&2&6&8\\1&2&1&3&4
+\end{pmatrix}$
+\end{enumerate}
+
+
 \section{n ta noma'lumli m ta chiziqli tenglamalar sistemasini yechish}
+
+Tenglamalar sistemasini yeching:
+\begin{enumerate}\setcounter{enumi}{440}
+	\item $\begin{cases}3x_1+2x_2=4\\
+		x_1-4x_2=-1\\
+		7x_1+10x_2=12\\
+		5x_1+6x_2=8\\
+		3x_1-16x_2=8
+	\end{cases}$
+
+\item $\begin{cases}
+	x_1+5x_2+4x_3=1\\
+	2x_1+10x_2+8x_3=3\\
+	3x_1+15x_2+12x_3=5
+\end{cases}$
+
+\item $\begin{cases}
+	x_1-3x_2+2x_3=-1\\
+	x_1+9x_2+6x_3=3\\
+	x_1+3x_2+4x_3=1
+\end{cases}$
+\end{enumerate}
+
 \section{Chiziqli tenglamalar sistemasini Gauss usulida yechish}
 
 
